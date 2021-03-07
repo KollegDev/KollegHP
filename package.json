@@ -1,0 +1,16 @@
+{
+  "name": "stdev",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "style": "tailwind build style.css -o public/css/style.css",
+    "build": "tailwind build style.css -o public/css/style.css && vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.7",
+    "tailwindcss": "^2.0.3",
+    "vite": "^2.0.5"
+  }
+}
