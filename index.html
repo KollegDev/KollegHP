@@ -13,60 +13,67 @@
   <title>Informatik_</title>
 </head>
 
-<body class="flex bg-white h-screen">
-  <header class="fixed h-10 w-full bg-white flex items-center border-b-2 border-black">
-    <a class="inline-flex items-center justify-center h-10 w-12">
-      <i class='bx bx-menu-alt-left text-4xl text-black'></i>
+<body class="h-screen bg-white sm:flex">
+  <header class="fixed top-0 flex items-center w-full h-10 bg-white border-b-2 border-black">
+    <a class="inline-flex items-center justify-center w-12 h-10">
+      <i class='text-4xl text-black bx bx-menu-alt-left'></i>
     </a>
-    <h1 class="subpixel-antialiased text-2xl font-bold text-black pl-2">INFORMATIK_</h1>
-    <div class="fixed right-0 border-l-2 border-black">
+    <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black">INFORMATIK_</h1>
+    <div class="fixed right-0 invisible border-l-2 border-black sm:visible">
       <a href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-        <h1 class="subpixel-antialiased text-2xl font-bold text-black pl-2 pr-2 hover:text-red">ZUR
+        <h1 class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black sm:visible hover:text-red">ZUR
           ANMELDUNG
         </h1>
       </a>
 
     </div>
 
-  </header>
+  </header >
   <!--Left Navigation Menu-->
-  <aside class="flex flex-col">
-    <a class="inline-flex items-center justify-center h-10 w-10">
-      <i class='bx bx-menu-alt-left text-3xl text-black'></i>
-    </a>
-    <div class="flex-grow flex flex-col justify-between bg-white border-r-2 border-black">
+  <aside class="flex-col hidden sm:flex">
+    <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black">
       <nav class="flex flex-col px-2 pr-4">
-        <a href="" class="flex items-center justify-start py-2 w-full text-2xl text-center text-black font-medium">
-          <i class='bx bx-info-circle text-3xl pr-4'></i>
+        <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
+          <i class='pr-4 text-3xl bx bx-info-circle'></i>
           Info
         </a>
-        <a href="" class="flex items-center justify-start py-2 w-full text-2xl text-center text-black font-medium">
-          <i class='bx bx-book text-3xl pr-4'></i>
+        <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
+          <i class='pr-4 text-3xl bx bx-book'></i>
           Fächer
         </a>
-        <a href="" class="flex items-center justify-start py-2 w-full text-2xl text-center text-black font-medium">
-          <i class='bx bxs-component text-3xl pr-4'></i>
+        <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
+          <i class='pr-4 text-3xl bx bxs-component'></i>
           Projekte
         </a>
-        <a href="" class="flex items-center justify-start py-2 w-full text-2xl text-center text-black font-medium">
-          <i class='bx bxs-compass text-3xl pr-4'></i>
+        <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
+          <i class='pr-4 text-3xl bx bxs-compass'></i>
           Tour
         </a>
       </nav>
       <!--Logo-->
       <div class="flex-row w-full">
         <img src="favicon_dark.svg" alt="Systemechnik Logo" class="block m-auto">
-        <a href="" class="flex items-center py-4 w-full text-2xl text-center text-black font-medium">
-          <i class='bx bx-mail-send text-3xl pt-1 px-2 pr-4'></i>
+        <a href="" class="flex items-center w-full py-4 text-2xl font-medium text-center text-black">
+          <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i>
           Kontakt
         </a>
       </div>
-
     </div>
   </aside>
+
   <!--Mainpage-->
-  <div id="mainpage" class="flex-grow text-black mt-16 overflow-y-scroll">
-  </div>
+  <div id="mainpage" class="flex-grow p-5 mt-10 mb-auto overflow-y-auto text-black sm:overflow-y-scroll">
+</div>
+
+      <!--Mobile Footer-->
+      <div class="fixed bottom-0 inline-flex justify-between visible w-full h-10 bg-gray-100 sm:hidden">
+        <div><a href="" class="flex items-center text-2xl font-medium text-center text-black py--2">
+          <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i>
+          Kontakt
+        </a></div>
+       <img class="p-0.5" src="favicon_dark.svg" alt="Systemechnik Logo" >
+      </div>
+
   <script type="module" src="/main.js"></script>
 </body>
 
