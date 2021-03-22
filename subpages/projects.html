@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
@@ -12,12 +12,18 @@
   <link rel="stylesheet" href="/public/css/style.css">
   <title>Informatik_</title>
 </head>
+
 <body class="h-screen bg-white sm:flex">
-  <header class="fixed top-0 flex items-center w-full h-10 bg-white border-b-2 border-black">
-    <a class="inline-flex items-center justify-center w-12 h-10">
-      <i class='text-4xl text-black bx bx-menu-alt-left'></i>
+  <header class="fixed top-0 flex items-center w-full bg-white border-b-2 border-black h-11 sm:h-10">
+    <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
+      <button id="hamburger-full">
+        <i class='text-4xl text-black bx toggle-full bx-menu-alt-left'></i>
+        <i class='hidden text-4xl text-black toggle-full bx bx-x-circle'></i>
+      </button>
     </a>
-    <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black">INFORMATIK_</h1>
+    <a href="/index.html">
+      <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black">INFORMATIK_</h1>
+    </a>
     <div class="fixed right-0 invisible border-l-2 border-black sm:visible">
       <a href="https://anmeldung.htl.moedling.at/anmeldung.external/">
         <h1 class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black sm:visible hover:text-red">ZUR
@@ -27,10 +33,10 @@
 
     </div>
 
-  </header >
+  </header>
   <!--Left Navigation Menu-->
-  <aside class="flex-col hidden sm:flex">
-    <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black">
+  <aside class="flex-col hidden sm:flex ">
+    <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black toggle-full">
       <nav class="flex flex-col px-2 pr-4 mt-10">
         <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
           <i class='pr-4 text-3xl bx bx-info-circle'></i>
@@ -40,7 +46,8 @@
           <i class='pr-4 text-3xl bx bx-book'></i>
           Fächer
         </a>
-        <a href="/subpages/projects.html" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
+        <a href="/subpages/projects.html"
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
           <i class='pr-4 text-3xl bx bxs-component'></i>
           Projekte
         </a>
@@ -51,7 +58,7 @@
       </nav>
       <!--Logo-->
       <div class="flex-row w-full">
-        <img src="favicon_dark.svg" alt="Systemechnik Logo" class="block m-auto">
+        <img src="/favicon_dark.svg" alt="Systemechnik Logo" class="block m-auto">
         <a href="" class="flex items-center w-full py-4 text-2xl font-medium text-center text-black">
           <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i>
           Kontakt
@@ -59,81 +66,114 @@
       </div>
     </div>
   </aside>
-  
+
   <!--Mainpage-->
-<div id="mainpage" class="flex-grow mt-10 overflow-y-auto text-black sm:overflow-y-scroll">
-  <h3 class="p-4 mt-4 font-serif text-4xl font-light leading-relaxed tracking-tight text-center">
-    <i class='text-2xl bx bx-left-arrow'> </i> 2020|2021 <i class='text-2xl bx bx-right-arrow'></i></h3>
-  <div class="grid grid-cols-2 gap-3 p-4">
-  <!--Card one-->
-    <div class="row-span-2 " >
-       <a href="projectDescription.html"><img class="object-cover w-full h-96 rounded-t-2xl " src="https://cdn.discordapp.com/attachments/681523223724425369/823565774496071730/image0.jpg" alt="" /></a>
-      <div
-       style="border-radius: 0px 0px 25px 25px;
+  <div id="mainpage" class="flex-grow mt-10 overflow-y-auto text-black sm:overflow-y-scroll">
+    <h3 class="p-4 mt-4 text-4xl font-light leading-relaxed tracking-tight text-center">
+      <i class='text-2xl bx bx-left-arrow'> </i> 2020|2021 <i class='text-2xl bx bx-right-arrow'></i>
+    </h3>
+    <div class="grid grid-cols-2 gap-3 p-4">
+      <!--Card one-->
+      <div class="row-span-2 ">
+        <a href="projectDescription.html"><img class="object-cover w-full h-96 rounded-t-2xl "
+            src="https://cdn.discordapp.com/attachments/681523223724425369/823565774496071730/image0.jpg" alt="" /></a>
+        <div style="border-radius: 0px 0px 25px 25px;
               background: rgba(255, 255, 255, 0.1);
               box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
               backdrop-filter: blur(60.844px);
-              border-radius: 0px 0px 25px 25px;"
-       class="p-2 shadow-2xl rounded-b-2xl" >
-        <h1 class="font-bold">Card one</h1>  
-        <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+              border-radius: 0px 0px 25px 25px;" class="p-2 shadow-2xl rounded-b-2xl">
+          <h1 class="font-bold">Card one</h1>
+          <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+        </div>
       </div>
-    </div>
-    <!--Card two-->
-    <div class="">
-      <img class="object-cover w-full h-36 rounded-t-2xl" src="" alt="" />
-      <div
-       style="border-radius: 0px 0px 25px 25px;
+      <!--Card two-->
+      <div class="">
+        <img class="object-cover w-full h-36 rounded-t-2xl" src="" alt="" />
+        <div style="border-radius: 0px 0px 25px 25px;
               background: rgba(255, 255, 255, 0.1);
               box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
               backdrop-filter: blur(60.844px);
-              border-radius: 0px 0px 25px 25px;"
-       class="p-2 bg-gray-400 rounded-b-2xl bg-opacity-20 ">
-        <h1 class="font-bold">Card two</h1>  
-        <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+              border-radius: 0px 0px 25px 25px;" class="p-2 bg-gray-400 rounded-b-2xl bg-opacity-20 ">
+          <h1 class="font-bold">Card two</h1>
+          <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+        </div>
       </div>
-    </div>
-    <!--Card three-->
-    <div class="">
-      <img class="object-cover w-full h-36 rounded-t-2xl" src="" alt="" />
-      <div 
-       style="border-radius: 0px 0px 25px 25px;
+      <!--Card three-->
+      <div class="">
+        <img class="object-cover w-full h-36 rounded-t-2xl" src="" alt="" />
+        <div style="border-radius: 0px 0px 25px 25px;
               background: rgba(255, 255, 255, 0.1);
               box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
               backdrop-filter: blur(60.844px);
-              border-radius: 0px 0px 25px 25px;"
-      class="p-2 bg-gray-400 rounded-b-2xl bg-opacity-20 ">
-        <h1 class="font-bold">Card three</h1>  
-        <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+              border-radius: 0px 0px 25px 25px;" class="p-2 bg-gray-400 rounded-b-2xl bg-opacity-20 ">
+          <h1 class="font-bold">Card three</h1>
+          <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+        </div>
       </div>
-    </div>
-    <!--Card four-->
-    <div class="col-span-2 ">
-      <img class="object-cover w-full h-56 rounded-t-2xl" src="" alt="" />
-      <div
-      style="border-radius: 0px 0px 25px 25px;
+      <!--Card four-->
+      <div class="col-span-2 ">
+        <img class="object-cover w-full h-56 rounded-t-2xl" src="" alt="" />
+        <div style="border-radius: 0px 0px 25px 25px;
              background: rgba(255, 255, 255, 0.1);
              box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
              backdrop-filter: blur(60.844px);
-             border-radius: 0px 0px 25px 25px;" 
-      class="p-2 bg-gray-400 rounded-b-2xl bg-opacity-20 ">
-        <h1 class="font-bold">Card four</h1>  
-        <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+             border-radius: 0px 0px 25px 25px;" class="p-2 bg-gray-400 rounded-b-2xl bg-opacity-20 ">
+          <h1 class="font-bold">Card four</h1>
+          <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+        </div>
       </div>
+
     </div>
 
   </div>
 
-</div> 
 
-      <!--Mobile Footer-->
-      <div class="fixed bottom-0 inline-flex justify-between visible w-full h-10 bg-gray-100 sm:hidden">
-        <div><a href="" class="flex items-center text-2xl font-medium text-center text-black py--2">
-          <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i>
-          Kontakt
-        </a></div>
-       <img class="p-0.5" src="favicon_dark.svg" alt="Systemechnik Logo" >
-      </div>
+  <!--Mobile navbar-->
+  <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
+    <div class="flex sm:hidden">
+      <button id="hamburger">
+        <i class='block text-4xl text-black toggle bx bx-menu-alt-left'></i>
+        <i class='hidden text-4xl text-black toggle bx bx-x-circle'></i>
+      </button>
+    </div>
+    <div class="flex flex-col w-screen h-screen bg-white divide-y toggle text-bold">
+      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+        <i class='pr-4 text-3xl bx bx-info-circle'></i>
+        Info
+      </a>
+      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+        <i class='pr-4 text-3xl bx bx-book'></i>
+        Fächer
+      </a>
+      <a href=""
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left">
+        <i class='pr-4 text-3xl bx bxs-component'></i>
+        Projekte
+      </a>
+      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+        <i class='pr-4 text-3xl bx bxs-compass'></i>
+        Tour
+      </a>
+      <div class=""></div>
+      <a class="flex items-center justify-center h-12 border-black"
+        href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+        <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red">ZUR
+          ANMELDUNG
+        </h1>
+      </a>
+    </div>
+  </nav>
+
+  <!--Mobile Footer-->
+  <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden">
+    <div><a href="" class="flex items-center text-2xl font-medium text-center text-black py--2">
+        <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i>
+        Kontakt
+      </a></div>
+    <img class="p-0.5" src="/favicon_dark.svg" alt="Systemechnik Logo">
+  </div>
+
   <script type="module" src="/main.js"></script>
 </body>
+
 </html>
