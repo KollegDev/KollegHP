@@ -1,16 +1,24 @@
 console.log("Init");
+setInterval(animateTitle,500);
 
-function NavToggle(elements) {
-  for (let i = 0; i < elements.length; i++) {
-    elements.item(i).classList.toggle("hidden");
-  }
+function animateTitle() {
+  if(document.title == "Informatik_"){
+    document.title = "Informatik";
+  }else{
+    document.title = "Informatik_";
+  };
 }
 
-document.getElementById("hamburger").onclick = function toggleMenu() {
-  NavToggle(document.getElementsByClassName("toggle"));
-};
+  function NavToggle(elements) {
+    for (let i = 0; i < elements.length; i++) {
+      elements.item(i).classList.toggle("hidden");
+    }
+  }
 
-document.getElementById("hamburger-full").onclick = function toggleMenu() {
-  NavToggle(document.getElementsByClassName("toggle-full"));
-};
+  document.getElementById("hamburger").onclick = function toggleMenu() {
+    NavToggle(document.getElementsByClassName("toggle"));
+  };
 
+  document.getElementById("hamburger-full").onclick = function toggleMenu() {
+    NavToggle(document.getElementsByClassName("toggle-full"));
+  };
