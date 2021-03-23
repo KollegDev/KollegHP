@@ -11,4 +11,13 @@ module.exports = {
   presets: [
     require("./spearlux.js")
   ],
+  theme: {
+    backdropFilter: {
+      'none': 'none',
+      'blur': 'blur(20px)',
+    },
+  },
+  plugins: [
+    require('tailwindcss-filters'),
+  ],
 };
