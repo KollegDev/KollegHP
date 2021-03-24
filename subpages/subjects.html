@@ -16,22 +16,28 @@
 <body class="h-screen bg-white sm:flex">
   <header class="fixed top-0 flex items-center w-full bg-white border-b-2 border-black h-11 sm:h-10">
     <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
-      <i class='text-4xl text-black bx bx-menu-alt-left'></i> 
+      <button id="hamburger-full">
+        <i class='hidden text-4xl text-black bx toggle-full bx-menu-alt-left'></i>
+        <i class='text-4xl text-black toggle-full bx bx-x-circle'></i>
+      </button>
     </a>
-    <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black">INFORMATIK_</h1>
+    <a href="/index.html">
+      <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black">INFORMATIK<span class="animate-blink">_</span></h1>
+    </a>
     <div class="fixed right-0 invisible border-l-2 border-black sm:visible">
       <a href="https://anmeldung.htl.moedling.at/anmeldung.external/">
         <h1 class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black sm:visible hover:text-red">ZUR
           ANMELDUNG
         </h1>
+
       </a>
 
     </div>
 
-  </header >
+  </header>
   <!--Left Navigation Menu-->
-  <aside class="flex-col hidden sm:flex">
-    <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black">
+  <aside class="flex-col hidden sm:flex ">
+    <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black toggle-full">
       <nav class="flex flex-col px-2 pr-4 mt-10">
         <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
           <i class='pr-4 text-3xl bx bx-info-circle'></i>
@@ -41,7 +47,8 @@
           <i class='pr-4 text-3xl bx bx-book'></i>
           Fächer
         </a>
-        <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
+        <a href="/subpages/projects.html"
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
           <i class='pr-4 text-3xl bx bxs-component'></i>
           Projekte
         </a>
@@ -63,9 +70,28 @@
 
   <!--Mainpage-->
   <div id="mainpage" class="flex-grow pb-5 mt-10 overflow-y-auto text-black sm:overflow-y-scroll">
-    <h1 class="items-center justify-center w-full text-4xl font-medium text-center text-black mt-7">IT-Fächer</h1>
-    <div class="grid grid-cols-1 gap-5 mx-auto my-10 mx-15 sm:mx-20 place-items-auto md:w-5/5"> 
-      <!--Fach-Dummy-->
+        <!--My Content-->
+        <h1 class="items-center justify-center w-full text-4xl font-medium text-center text-black mt-7">IT-Fächer</h1>
+        <div class="grid grid-cols-1 gap-5 mx-auto my-10 mx-15 sm:mx-20 place-items-auto md:w-5/5"> 
+          <!--Fach-Dummy-->
+                  <div class="p-2 rounded-xl md:w-5/5">
+                    <div class="md:flex">
+                      <div class="md:flex">
+                          <!-- IMAGE <img class="md:w-3/5 rounded-l-xl" src="thomas-jensen-ISG-rUel0Uw-unsplash.jpg" alt=""> -->
+                        <div class="bg-blue-500 md:w-3/5 rounded-l-xl">
+                          <p class="p-5 text-blue-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
+                        </div>
+                          <div class="p-5 bg-gray-300 md:w-2/5 rounded-r-xl">
+                            <h2 class="inline-block mb-2 ml-3 text-2xl font-medium text-center">Fach</h2>
+                            <!-- REAL TEXT <p class="mt-2 text-black">Im POS (Programmieren und System-Engineering)-Unterricht lernt man grundlegende Kenntnisse 
+                            des Programmierens mittels der klassenorientierten Programmiersprache C# im .NET-Framework.
+                            Es sind keine Vorkenntnisse notwendig. Meistens geht es um kleine Konsolenanwendungen bis zu ersten kleinen Projekten.</p>
+                            <p class="mt-2 text-blue-500">Stichworte: <br> C#, Compiler ,Visual Studio ,Klassen ,Methoden ,Wertetypen ,.NET ,MSdocs</p> -->
+                            <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p> -->
+                         </div>
+                       </div>
+                      </div>
+              </div>
               <div class="p-2 rounded-xl md:w-5/5">
                 <div class="md:flex">
                   <div class="md:flex">
@@ -84,69 +110,53 @@
                    </div>
                   </div>
           </div>
-          <div class="p-2 rounded-xl md:w-5/5">
-            <div class="md:flex">
-              <div class="md:flex">
-                  <!-- IMAGE <img class="md:w-3/5 rounded-l-xl" src="thomas-jensen-ISG-rUel0Uw-unsplash.jpg" alt=""> -->
-                <div class="bg-blue-500 md:w-3/5 rounded-l-xl">
-                  <p class="p-5 text-blue-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p>
-                </div>
-                  <div class="p-5 bg-gray-300 md:w-2/5 rounded-r-xl">
-                    <h2 class="inline-block mb-2 ml-3 text-2xl font-medium text-center">Fach</h2>
-                    <!-- REAL TEXT <p class="mt-2 text-black">Im POS (Programmieren und System-Engineering)-Unterricht lernt man grundlegende Kenntnisse 
-                    des Programmierens mittels der klassenorientierten Programmiersprache C# im .NET-Framework.
-                    Es sind keine Vorkenntnisse notwendig. Meistens geht es um kleine Konsolenanwendungen bis zu ersten kleinen Projekten.</p>
-                    <p class="mt-2 text-blue-500">Stichworte: <br> C#, Compiler ,Visual Studio ,Klassen ,Methoden ,Wertetypen ,.NET ,MSdocs</p> -->
-                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, architecto, explicabo perferendis nostrum, maxime impedit atque odit sunt pariatur illo obcaecati soluta molestias iure facere dolorum adipisci eum? Saepe, itaque.</p> -->
-                 </div>
-               </div>
-              </div>
-      </div>
-        </div>
-    </div>
-
-<!--Mobile navbar-->
-<nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">      
-  <div class="flex sm:hidden">
-    <button id="hamburger">
-    <i class='block text-4xl text-black toggle bx bx-menu-alt-left'></i> 
-    <i class='hidden text-4xl text-black toggle bx bx-x-circle'></i> 
-    </button>
+            </div>
   </div>
-  <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold">        
-    <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
-      <i class='pr-4 text-3xl bx bx-info-circle'></i>
-      Info
-    </a>
-    <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
-      <i class='pr-4 text-3xl bx bx-book'></i>
-      Fächer
-    </a>
-    <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left">
-      <i class='pr-4 text-3xl bx bxs-component'></i>
-      Projekte
-    </a>
-    <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
-      <i class='pr-4 text-3xl bx bxs-compass'></i>
-      Tour
-    </a>
-    <div class=""></div>
-    <a class="flex items-center justify-center h-12 border-black" href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-      <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red">ZUR
-        ANMELDUNG
-      </h1>
-    </a> 
-   </div> 
-  </nav> 
 
-      <!--Mobile Footer-->
-      <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden">
-        <div><a href="" class="flex items-center text-2xl font-medium text-center text-black py--2">
-          <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i>
-          Kontakt
-        </a></div>
-       <img class="p-0.5" src="favicon_dark.svg" alt="Systemechnik Logo" >
-      </div>
+  <!--Mobile navbar-->
+  <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
+    <div class="flex sm:hidden">
+      <button id="hamburger">
+        <i class='block text-4xl text-black toggle bx bx-x-circle'></i>
+        <i class='hidden text-4xl text-black toggle bx bx-menu-alt-left'></i>
+      </button>
+    </div>
+    <div class="flex flex-col w-screen h-screen bg-white divide-y toggle text-bold">
+      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+        <i class='pr-4 text-3xl bx bx-info-circle'></i>
+        Info
+      </a>
+      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+        <i class='pr-4 text-3xl bx bx-book'></i>
+        Fächer
+      </a>
+      <a href="/subpages/projects.html"
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left">
+        <i class='pr-4 text-3xl bx bxs-component'></i>
+        Projekte
+      </a>
+      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+        <i class='pr-4 text-3xl bx bxs-compass'></i>
+        Tour
+      </a>
+      <div class=""></div>
+      <a class="flex items-center justify-center h-12 border-black"
+        href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+        <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red">ZUR
+          ANMELDUNG
+        </h1>
+      </a>
+    </div>
+  </nav>
+
+  <!--Mobile Footer-->
+  <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden">
+    <div><a href="" class="flex items-center text-2xl font-medium text-center text-black py--2">
+        <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i>
+        Kontakt
+      </a></div>
+    <img class="p-0.5" src="favicon_dark.svg" alt="Systemechnik Logo">
+  </div>
 
   <script type="module" src="/main.js"></script>
 </body>
