@@ -6,56 +6,19 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/public/css/style.css">
     <title>Informatik_</title>
-    <style>
-        .carousel-open:checked+.carousel-item {
-            position: static;
-            opacity: 100;
-        }
-        
-        .carousel-item {
-            -webkit-transition: opacity 0.6s ease-out;
-            transition: opacity 0.6s ease-out;
-        }
-        
-        #carousel-1:checked~.control-1,
-        #carousel-2:checked~.control-2,
-        #carousel-3:checked~.control-3 {
-            display: block;
-        }
-        
-        .carousel-indicators {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            bottom: 2%;
-            left: 0;
-            right: 0;
-            text-align: center;
-            z-index: 10;
-        }
-        
-        #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
-        #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
-        #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
-            color: #2b6cb0;
-            /*Set to match the Tailwind colour you want the active one to be */
-        }
-    </style>
 </head>
 
 <body class="h-screen bg-white sm:flex">
     <header class="fixed top-0 flex items-center w-full bg-white border-b-2 border-black h-11 sm:h-10">
         <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
             <button id="hamburger-full">
-        <i class='hidden text-4xl text-black bx toggle-full bx-menu-alt-left'></i>
-        <i class='text-4xl text-black toggle-full bx bx-x-circle'></i>
-      </button>
+          <i class='text-4xl text-black bx toggle-full bx-menu-alt-left'></i>
+          <i class='hidden text-4xl text-black toggle-full bx bx-x-circle'></i>
+        </button>
         </a>
         <a href="/index.html">
             <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black">INFORMATIK<span class="animate-blink">_</span></h1>
@@ -64,20 +27,18 @@
             <a href="https://anmeldung.htl.moedling.at/anmeldung.external/">
                 <h1 class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black sm:visible hover:text-red">ZUR ANMELDUNG
                 </h1>
-
             </a>
-
         </div>
 
     </header>
     <!--Left Navigation Menu-->
-    <aside class="flex-col hidden sm:flex ">
+    <aside class="flex-col hidden sm:flex">
         <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black toggle-full">
             <nav class="flex flex-col px-2 pr-4 mt-10">
                 <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
                     <i class='pr-4 text-3xl bx bx-info-circle'></i> Info
                 </a>
-                <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
+                <a href="/subpages/subjects.html" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
                     <i class='pr-4 text-3xl bx bx-book'></i> Fächer
                 </a>
                 <a href="/subpages/projects.html" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
@@ -100,22 +61,14 @@
     <!--Mainpage-->
     <div id="mainpage" class="flex-grow pb-5 mt-10 overflow-y-auto text-black sm:overflow-y-scroll">
 
-        <div class="grid grid-cols-1 gap-3 p-4 xl:grid-cols-2 " style="display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 916px;">
-            <div>
+        <div class="grid grid-cols-1 mt-10 sm:mx-20 place-items-center justify-center md:w-5/5" style="display: flex; max-width: 916px; ">
+            <div class="place-items-center justify-center">
                 <!--Carussel Element-->
-                <div>
-                    <h3 class="p-4 mt-4 text-4xl font-light leading-relaxed tracking-tight text-center">Example field FFF</h3>
-                    <img style="
-                    height: 250px;" class="object-cover w-full rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp" />
-                    <div style="
-                        background: #DADADA;;
-                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                        border-radius: 32px;
-                        display: flex;" class="p-2 shadow-2xl rounded-b-2xl">
-                        <div class="flex flex-wrap">
+                <div class="grid grid-cols-1 mt-10 sm:mx-20 place-items-center justify-center md:w-5/5 ">
+                    <h3 class="p-4 mt-4 text-4xl font-light leading-relaxed tracking-tight text-center ">Example field FFF</h3>
+                    <img style=" max-height: 250px; " class="object-cover w-full rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
+                    <div class="p-2 shadow-2xl rounded-b-2xl md:flex">
+                        <div class="flex flex-wrap ">
                             <p>Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed.
                                 Senectus blandit eu condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum quisque id donec elementum rhoncus sed aliquet accumsan.
                             </p>
@@ -134,38 +87,6 @@
         </div>
     </div>
 
-
-
-
-    <!--Mobile navbar-->
-    <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
-        <div class="flex sm:hidden">
-            <button id="hamburger">
-                <i class='hidden text-4xl text-black toggle bx bx-x-circle'></i>
-                <i class='block text-4xl text-black toggle bx bx-menu-alt-left'></i>
-              </button>
-            </div>
-            <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold">
-            <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
-                <i class='pr-4 text-3xl bx bx-info-circle'></i> Info
-            </a>
-            <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
-                <i class='pr-4 text-3xl bx bx-book'></i> Fächer
-            </a>
-            <a href="/subpages/projects.html" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left">
-                <i class='pr-4 text-3xl bx bxs-component'></i> Projekte
-            </a>
-            <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
-                <i class='pr-4 text-3xl bx bxs-compass'></i> Tour
-            </a>
-            <div class=""></div>
-            <a class="flex items-center justify-center h-12 border-black" href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-                <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red">ZUR ANMELDUNG
-                </h1>
-            </a>
-        </div>
-    </nav>
-
     <!--Mobile Footer-->
     <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden">
         <div>
@@ -173,7 +94,7 @@
                 <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i> Kontakt
             </a>
         </div>
-        <img class="p-0.5" src="favicon_dark.svg" alt="Systemechnik Logo">
+        <img class="p-0.5" src="/favicon_dark.svg" alt="Systemechnik Logo">
     </div>
 
     <script type="module" src="/main.js"></script>
