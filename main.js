@@ -14,11 +14,10 @@ function animateTitle() {
       elements.item(i).classList.toggle("hidden");
     }
   }
-
+  
   document.getElementById("hamburger").onclick = function toggleMenu() {
     NavToggle(document.getElementsByClassName("toggle"));
   };
-
   document.getElementById("hamburger-full").onclick = function toggleMenu() {
     NavToggle(document.getElementsByClassName("toggle-full"));
   };
