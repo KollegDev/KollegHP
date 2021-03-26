@@ -6,10 +6,11 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/public/css/style.css">
+
+
 
     <title>Informatik_</title>
     <style>
@@ -92,11 +93,11 @@
     <!--Mainpage-->
     <div id="mainpage" class="flex justify-center flex-grow pb-5 mt-10 overflow-y-auto leading-normal tracking-normal text-black sm:overflow-y-scroll">
         <!--Carousel-->
-        <div class="relative flex justify-center overflow-hidden carousel" style="max-width: 916px; ">
+        <div class="relative flex justify-center overflow-hidden carousel" style="max-width: 1250px; ">
             <div class="grid grid-cols-1 carousel-inner ">
                 <!--Carousel Element 1-->
-                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="false" checked="ckecked">
-                <div class="absolute mt-10 opacity-0 carousel-item sm:mx-20">
+                <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="false" checked="checked">
+                <div class="absolute mx-5 mt-10 opacity-0 carousel-item sm:mx-20">
                     <h3 class="p-4 mt-4 text-4xl font-light leading-relaxed tracking-tight text-center ">Example field FFF1</h3>
                     <img style=" max-height: 250px; " class="object-cover w-full rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
                     <div class="p-2 shadow-2xl rounded-b-2xl">
@@ -120,8 +121,8 @@
 
 
                 <!--Carousel Element 2-->
-                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="" checked="">
-                <div class="absolute mt-10 opacity-0 carousel-item sm:mx-20">
+                <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                <div class="absolute mx-5 mt-10 opacity-0 carousel-item sm:mx-20">
                     <h3 class="p-4 mt-4 text-4xl font-light leading-relaxed tracking-tight text-center ">Example field FFF2</h3>
                     <img style=" max-height: 250px; " class="object-cover w-full rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
                     <div class="p-2 shadow-2xl rounded-b-2xl">
@@ -144,8 +145,8 @@
                 <label for="carousel-3" class="absolute inset-y-0 right-0 z-10 hidden w-10 h-10 my-auto mr-2 text-3xl font-bold leading-tight text-center text-black bg-white rounded-full cursor-pointer next control-2 md:mr-10 hover:text-white hover:bg-blue-700">›</label>
 
                 <!--Carousel Element 3-->
-                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="" checked="">
-                <div class="absolute mt-10 opacity-0 carousel-item sm:mx-20 ">
+                <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                <div class="absolute mx-5 mt-10 opacity-0 carousel-item sm:mx-20">
                     <h3 class="p-4 mt-4 text-4xl font-light leading-relaxed tracking-tight text-center ">Example field FFF3</h3>
                     <img style=" max-height: 250px; " class="object-cover w-full rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
                     <div class="p-2 shadow-2xl rounded-b-2xl">
@@ -184,7 +185,34 @@
             </div>
         </div>
     </div>
-
+    <!--Mobile navbar-->
+    <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
+        <div class="flex sm:hidden">
+            <button id="hamburger">
+        <i class='hidden text-4xl text-black toggle bx bx-x-circle'></i>
+        <i class='block text-4xl text-black toggle bx bx-menu-alt-left'></i>
+      </button>
+        </div>
+        <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold">
+            <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+                <i class='pr-4 text-3xl bx bx-info-circle'></i> Info
+            </a>
+            <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+                <i class='pr-4 text-3xl bx bx-book'></i> Fächer
+            </a>
+            <a href="/subpages/projects.html" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left">
+                <i class='pr-4 text-3xl bx bxs-component'></i> Projekte
+            </a>
+            <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+                <i class='pr-4 text-3xl bx bxs-compass'></i> Tour
+            </a>
+            <div class=""></div>
+            <a class="flex items-center justify-center h-12 border-black" href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+                <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red">ZUR ANMELDUNG
+                </h1>
+            </a>
+        </div>
+    </nav>
     <!--Mobile Footer-->
     <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden">
         <div>
