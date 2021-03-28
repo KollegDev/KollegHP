@@ -11,7 +11,7 @@ Yarn
 
 ## Starting guide
 
-1. Clone the development branch
+1. CloneWars the development branch
 2. Open the project in VS-Code
 3. Enter following commands into either the integrated terminal or into an external terminal (Path = Your project folder)
 
