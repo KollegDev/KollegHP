@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/public/css/style.css">
     <title>Informatik_</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <style>
         .carousel-open:checked+.carousel-item {
             position: static;
@@ -26,18 +26,6 @@
         #carousel-2:checked~.control-2,
         #carousel-3:checked~.control-3 {
             display: block;
-        }
-        
-        .carousel-indicators {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            bottom: 2%;
-            left: 0;
-            right: 0;
-            text-align: center;
-            z-index: 10;
         }
         
         #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
@@ -96,16 +84,16 @@
     </aside>
 
     <!--Mainpage-->
-    <div id="mainpage" class="flex justify-center flex-grow pb-5 mt-10 overflow-y-auto leading-normal tracking-normal text-black sm:overflow-y-scroll">
+    <div id="mainpage" class="flex justify-center flex-grow pb-5 mt-10 overflow-y-auto text-black sm:overflow-y-scroll">
         <!--Carousel-->
-        <div class="relative flex justify-center carousel">
-            <div class="grid grid-cols-1 grid-rows-3 carousel-inner">
+        <div class="relative flex grid mx-10 grid-col-1 carousel">
+            <div class="justify-center">
                 <!--Carousel Element 1-->
                 <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="false" checked="checked">
-                <div class="absolute mx-5 mt-8 opacity-0 carousel-item sm:mx-20" style="max-width: 1050px;">
-                    <h3 class="p-4 text-4xl leading-relaxed tracking-tight text-center m:mt-2 sm:mt-1 ">Example field FFF1</h3>
-                    <img class="object-cover w-full lg:max-h-72 sm:max-h-40 rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
-                    <div class="p-4 shadow-2xl m:text-lg lg:text-xl sm:text-sm rounded-b-2xl" style=" top: 42 px; padding: 18px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                <div class="absolute mx-5 mt-0 opacity-0 lg:mt-8 md:mt-6 carousel-item sm:mx-20" style="max-width: 840px;">
+                    <h3 class="p-4 text-xl leading-relaxed tracking-tight text-center lg:text-4xl m:mt-2 sm:mt-1 ">Example field FFF1</h3>
+                    <img class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
+                    <div class="p-4 text-xs shadow-2xl lg:text-xl rounded-b-2xl" style=" top: 42 px; padding: 16px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                         <div>
                             <p>Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed.
                                 Senectus blandit eu condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum quisque id donec elementum rhoncus sed aliquet accumsan.
@@ -121,16 +109,16 @@
                         </div>
                     </div>
                 </div>
-                <label for="carousel-3" class="absolute inset-y-0 left-0 z-10 hidden w-10 h-10 my-auto ml-2 text-3xl font-bold leading-tight text-center text-black bg-white rounded-full cursor-pointer lg:ml-5 prev control-1 control-2 md:ml-10 hover:text-white hover:bg-blue-700">‹</label>
-                <label for="carousel-2" class="absolute inset-y-0 right-0 z-10 hidden w-10 h-10 my-auto mr-2 text-3xl font-bold leading-tight text-center text-black bg-white rounded-full cursor-pointer lg:mr-5 prev control-1 next control-2 md:mr-10 hover:text-white hover:bg-blue-700">›</label>
+                <label for="carousel-3" class="absolute inset-y-0 left-0 z-10 hidden w-10 h-10 my-auto -ml-10 text-3xl font-bold leading-tight text-center text-black rounded-full cursor-pointer lg:ml-5 prev control-1 md:ml-10 ">‹</label>
+                <label for="carousel-2" class="absolute inset-y-0 right-0 z-10 hidden w-10 h-10 my-auto -mr-10 text-3xl font-bold leading-tight text-center text-black rounded-full cursor-pointer lg:mr-5 next control-1 md:mr-10 ">›</label>
 
 
                 <!--Carousel Element 2-->
                 <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-                <div class="absolute mx-5 mt-8 opacity-0 carousel-item sm:mx-20" style="max-width: 1050px;">
-                    <h3 class="p-4 text-4xl leading-relaxed tracking-tight text-center m:mt-2 sm:mt-1 ">Example field FFF2</h3>
-                    <img class="object-cover w-full lg:max-h-72 sm:max-h-40 rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
-                    <div class="p-4 shadow-2xl m:text-lg lg:text-xl sm:text-sm rounded-b-2xl" style=" top: 42 px; padding: 18px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                <div class="absolute mx-5 mt-0 opacity-0 lg:mt-8 md:mt-6 carousel-item sm:mx-20" style="max-width: 840px;">
+                    <h3 class="p-4 text-xl leading-relaxed tracking-tight text-center lg:text-4xl m:mt-2 sm:mt-1 ">Example field FFF2</h3>
+                    <img class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
+                    <div class="p-4 text-xs shadow-2xl lg:text-xl rounded-b-2xl" style=" top: 42 px; padding: 16px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                         <div>
                             <p>Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed.
                                 Senectus blandit eu condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum quisque id donec elementum rhoncus sed aliquet accumsan.
@@ -146,15 +134,15 @@
                         </div>
                     </div>
                 </div>
-                <label for="carousel-1" class="absolute inset-y-0 left-0 z-10 hidden w-10 h-10 my-auto ml-2 text-3xl font-bold leading-tight text-center text-black bg-white rounded-full cursor-pointer lg:ml-5 prev control-2 md:ml-10 hover:text-white hover:bg-blue-700">‹</label>
-                <label for="carousel-3" class="absolute inset-y-0 right-0 z-10 hidden w-10 h-10 my-auto mr-2 text-3xl font-bold leading-tight text-center text-black bg-white rounded-full cursor-pointer lg:mr-5 next control-2 md:mr-10 hover:text-white hover:bg-blue-700">›</label>
+                <label for="carousel-1" class="absolute inset-y-0 left-0 z-10 hidden w-10 h-10 my-auto -ml-10 text-3xl font-bold leading-tight text-center text-black rounded-full cursor-pointer lg:ml-5 prev control-2 md:ml-10 ">‹</label>
+                <label for="carousel-3" class="absolute inset-y-0 right-0 z-10 hidden w-10 h-10 my-auto -mr-10 text-3xl font-bold leading-tight text-center text-black rounded-full cursor-pointer lg:mr-5 next control-2 md:mr-10 ">›</label>
 
                 <!--Carousel Element 3-->
                 <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-                <div class="absolute mx-5 mt-8 opacity-0 carousel-item sm:mx-20" style="max-width: 1050px;">
-                    <h3 class="p-4 text-4xl leading-relaxed tracking-tight text-center m:mt-2 sm:mt-1 ">Example field FFF3</h3>
-                    <img class="object-cover w-full lg:max-h-72 sm:max-h-40 m:max-h-20 rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
-                    <div class="p-4 shadow-2xl m:text-base lg:text-xl sm:text-sm rounded-b-2xl" style=" top: 42 px; padding: 18px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                <div class="absolute mx-5 mt-0 opacity-0 lg:mt-8 md:mt-6 carousel-item sm:mx-20" style="max-width: 840px;">
+                    <h3 class="p-4 text-xl leading-relaxed tracking-tight text-center lg:text-4xl m:mt-2 sm:mt-1 ">Example field FFF3</h3>
+                    <img class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
+                    <div class="p-4 text-xs shadow-2xl lg:text-xl rounded-b-2xl" style=" top: 42 px; padding: 16px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
                         <div>
                             <p>Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed.
                                 Senectus blandit eu condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum quisque id donec elementum rhoncus sed aliquet accumsan.
@@ -171,20 +159,20 @@
                     </div>
 
                 </div>
-                <label for="carousel-2" class="absolute inset-y-0 left-0 z-10 hidden w-10 h-10 my-auto ml-2 text-3xl font-bold leading-tight text-center text-black bg-white rounded-full cursor-pointer lg:ml-5 prev control-3 md:ml-10 hover:text-white hover:bg-blue-700">‹</label>
-                <label for="carousel-1" class="absolute inset-y-0 right-0 z-10 hidden w-10 h-10 my-auto mr-2 text-3xl font-bold leading-tight text-center text-black bg-white rounded-full cursor-pointer lg:mr-5 prev control-3 next md:mr-10 hover:text-white hover:bg-blue-700">›</label>
+                <label for="carousel-2" class="absolute inset-y-0 left-0 z-10 hidden w-10 h-10 my-auto -ml-10 text-3xl font-bold leading-tight text-center text-black rounded-full cursor-pointer lg:ml-5 prev control-3 md:ml-10 ">‹</label>
+                <label for="carousel-1" class="absolute inset-y-0 right-0 z-10 hidden w-10 h-10 my-auto -mr-10 text-3xl font-bold leading-tight text-center text-black rounded-full cursor-pointer lg:mr-5 next control-3 md:mr-10 ">›</label>
                 <!-- Add additional indicators for each slide-->
 
 
-                <ol class="carousel-indicators">
+                <ol class="absolute left-0 right-0 z-10 block p-0 m-0 text-center text-gray-200 list-none bottom-10">
                     <li class="inline-block mr-3">
-                        <label for="carousel-1" class="block text-gray-200 cursor-pointer text-9xl carousel-bullet hover:text-black">•</label>
+                        <label for="carousel-1" class="cursor-pointer text-9xl carousel-bullet hover:text-black">•</label>
                     </li>
                     <li class="inline-block mr-3 sm:text-l ">
-                        <label for="carousel-2" class="block text-gray-200 cursor-pointer text-9xl carousel-bullet hover:text-black">•</label>
+                        <label for="carousel-2" class="cursor-pointer text-9xl carousel-bullet hover:text-black">•</label>
                     </li>
                     <li class="inline-block mr-3 sm:text-l ">
-                        <label for="carousel-3" class="block text-gray-200 cursor-pointer text-9xl carousel-bullet hover:text-black">•</label>
+                        <label for="carousel-3" class="cursor-pointer text-9xl carousel-bullet hover:text-black">•</label>
                     </li>
                 </ol>
 
