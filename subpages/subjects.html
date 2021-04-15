@@ -9,9 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/public/css/style.css">
-  <link rel="stylesheet" href="/public/css/glide.core.css">
-  <link rel="stylesheet" href="/public/css/glide.theme.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/glide.core.css">
+  <link rel="stylesheet" href="/css/glide.theme.css">
   <title>Informatik_</title>
 </head>
 
@@ -75,7 +75,8 @@
 <!--Fach-Dummy--><div class="glide">
   <div class="glide__track" data-glide-el="track">
     <ul class="glide__slides">
-      <li class="glide__slide"><div class="ml-5 mr-5 md:flex ">
+      <li class="glide__slide">
+        <div class="ml-5 mr-5 md:flex ">
         <div class="md:flex">
           <img
           class="object-cover w-full mx-auto rounded-t-xl lg:rounded-l-xl lg:rounded-br-none lg:rounded-tr-none md:rounded-l-xl md:rounded-tr-none sm:rounded-b-none sm:rounded-t-xl"
@@ -98,8 +99,8 @@
       <li class="glide__slide">2</li>
     </ul>
     <div class="glide__arrows" data-glide-el="controls">
-      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">←</button>
-      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">→</button>
+      <p class="glide__arrow glide__arrow--left" data-glide-dir="<">←</p>
+      <p class="glide__arrow glide__arrow--right" data-glide-dir=">">→</p>
     </div>
   </div>
 </div>
@@ -161,10 +162,9 @@
   const config = {
     type:'slide',
     perView: 1
-  }
-  new Glide('.glide',config).mount()
+}
+  new Glide('.glide',config).mount();
 </script>
 </body>
 
 </html>
-
