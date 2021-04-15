@@ -1,11 +1,11 @@
 <svg width="113" height="98" viewBox="0 0 113 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <style>
     path {
-      fill: #ebebeb; 
+      fill: #464646;
     }
     @media (prefers-color-scheme: dark) {
       path {
-        fill: #464646;
+        fill: #D3D3D3; 
       }
     }
   </style>

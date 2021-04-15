@@ -5,7 +5,10 @@ module.exports = {
             colors: {
                 white: "#E0E0E0",
                 black: "#464646",
-                red: "#FF645A"
+                red: "#FF645A",
+                darker: "#202125",
+                darkgrey: "#2E2F33",
+                lightgrey: "#D3D3D3"
             },
             fontFamily: {
                 sans: ['Roboto', 'sans-serif'],
