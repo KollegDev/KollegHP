@@ -1,287 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/public/css/style.css" />
     <title>Informatik_</title>
     <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+      var slideIndex = 1;
+      showSlides(slideIndex);
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
 
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" text-black", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " text-black";
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
         }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" text-black", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " text-black";
+      }
     </script>
     <style>
-        /* Fading animation */
-        
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
+      /* Fading animation */
+
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.4;
         }
-        
-        @-webkit-keyframes fade {
-            from {
-                opacity: .4
-            }
-            to {
-                opacity: 1
-            }
+        to {
+          opacity: 1;
         }
-        
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-            to {
-                opacity: 1
-            }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
         }
+        to {
+          opacity: 1;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body onload="showSlides(1)" class="h-screen bg-white sm:flex dark:bg-darker">
+  <body onload="showSlides(1)" class="h-screen bg-white sm:flex dark:bg-darker" data-barba="wrapper">
     <header class="fixed top-0 flex items-center w-full bg-white border-b-2 border-black dark:bg-darkgrey h-11 sm:h-10">
-        <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
-            <button id="hamburger-full">
-              <i class='hidden text-4xl text-black bx toggle-full bx-menu-alt-left dark:text-lightgrey'></i>
-              <i class='text-4xl text-black toggle-full bx bx-x-circle dark:text-lightgrey'></i>
-            </button>
+      <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
+        <button id="hamburger-full">
+          <i class="hidden text-4xl text-black bx toggle-full bx-menu-alt-left dark:text-lightgrey"></i>
+          <i class="text-4xl text-black toggle-full bx bx-x-circle dark:text-lightgrey"></i>
+        </button>
+      </a>
+      <a href="/index.html">
+        <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black dark:text-lightgrey">
+          INFORMATIK<span class="animate-blink">_</span>
+        </h1>
+      </a>
+      <div class="fixed right-0 invisible border-l-2 border-black sm:visible">
+        <a href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+          <h1
+            class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black sm:visible hover:text-red dark:text-lightgrey dark:hover:text-blue-400"
+          >
+            ZUR ANMELDUNG
+          </h1>
         </a>
-        <a href="/index.html">
-            <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black dark:text-lightgrey">
-                INFORMATIK<span class="animate-blink">_</span></h1>
-        </a>
-        <div class="fixed right-0 invisible border-l-2 border-black sm:visible">
-            <a href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-                <h1 class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black sm:visible hover:text-red dark:text-lightgrey">
-                    ZUR ANMELDUNG
-                </h1>
-            </a>
-        </div>
-
+      </div>
     </header>
     <!--Left Navigation Menu-->
     <aside class="flex-col hidden sm:flex">
-        <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black dark:bg-darkgrey toggle-full">
-            <nav class="flex flex-col px-2 pr-4 mt-10">
-                <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
-                    <i class='pr-4 text-3xl bx bx-info-circle'></i> Info
-                </a>
-                <a href="/subpages/subjects.html" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
-                    <i class='pr-4 text-3xl bx bx-book'></i> Fächer
-                </a>
-                <a href="/subpages/projects.html" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
-                    <i class='pr-4 text-3xl bx bxs-component'></i> Projekte
-                </a>
-                <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
-                    <i class='pr-4 text-3xl bx bxs-compass'></i> Tour
-                </a>
-            </nav>
-            <!--Logo-->
-            <div class="flex-row w-full">
-                <img src="/favicon.svg" alt="Systemechnik Logo" class="block m-auto">
-                <a href="" class="flex items-center w-full py-4 text-2xl font-medium text-center text-black dark:text-lightgrey">
-                    <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i> Kontakt
-                </a>
-            </div>
+      <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black dark:bg-darkgrey toggle-full">
+        <nav class="flex flex-col px-2 pr-4 mt-10">
+          <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
+            <i class="pr-4 text-3xl bx bx-info-circle"></i> Info
+          </a>
+          <a
+            href="/subpages/subjects.html"
+            class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey"
+          >
+            <i class="pr-4 text-3xl bx bx-book"></i> Fächer
+          </a>
+          <a
+            href="/subpages/projects.html"
+            class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey"
+          >
+            <i class="pr-4 text-3xl bx bxs-component"></i> Projekte
+          </a>
+          <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
+            <i class="pr-4 text-3xl bx bxs-compass"></i> Tour
+          </a>
+        </nav>
+        <!--Logo-->
+        <div class="flex-row w-full">
+          <img src="/favicon.svg" alt="Systemechnik Logo" class="block m-auto" />
+          <a href="" class="flex items-center w-full py-4 text-2xl font-medium text-center text-black dark:text-lightgrey">
+            <i class="px-2 pt-1 pr-4 text-3xl bx bx-mail-send"></i> Kontakt
+          </a>
         </div>
+      </div>
     </aside>
 
     <!--Mainpage-->
-    <div id="mainpage" class="flex justify-center flex-grow pb-5 mt-10 overflow-x-hidden overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey">
-        <!--Carousel-->
-        <div class="relative mx-8">
-            <div class=" slideshow-container">
-                <!--Carousel Element 1-->
+    <div
+      id="mainpage"
+      class="flex justify-center flex-grow pb-5 mt-10 overflow-x-hidden overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey"
+      data-barba="container"
+      data-barba-namespace="home"
+    >
+      <!--Carousel-->
+      <div class="relative mx-8">
+        <div class="slideshow-container">
+          <!--Carousel Element 1-->
 
-                <div class="mx-5 mt-0 mySlides fade lg:mt-8 md:mt-6 sm:mx-20" style="max-width: 840px;">
-                    <h3 class="p-4 text-xl text-center numbertext lg:text-4xl m:mt-2 sm:mt-1 ">Example field FFF1</h3>
-                    <img class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
-                    <div class="p-4 text-xs shadow-2xl text lg:text-xl rounded-b-2xl" style=" box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <div>
-                            <p>1 Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed.
-                                Senectus blandit eu condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum quisque id donec elementum rhoncus sed aliquet accumsan.
-                            </p>
+          <div class="mx-5 mt-0 mySlides fade lg:mt-8 md:mt-6 sm:mx-20" style="max-width: 840px">
+            <h3 class="p-4 text-xl text-center numbertext lg:text-4xl m:mt-2 sm:mt-1">Example field FFF1</h3>
+            <img
+              class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl"
+              src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp "
+            />
+            <div class="p-4 text-xs shadow-2xl text lg:text-xl rounded-b-2xl" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+              <div>
+                <p>
+                  1 Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit
+                  ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed. Senectus blandit eu
+                  condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum
+                  quisque id donec elementum rhoncus sed aliquet accumsan.
+                </p>
 
-                            <ul>
-                                <br> 1 Berufsfelder:
-                                <li>- xxxxxx</li>
-                                <li>- xxxxxx</li>
-                                <li>- xxxxxx</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!--Carousel Element 2-->
-                <div class="hidden mx-5 mt-0 mySlides fade lg:mt-8 md:mt-6 sm:mx-20" style="max-width: 840px;">
-                    <h3 class="p-4 text-xl text-center numbertext lg:text-4xl m:mt-2 sm:mt-1 ">Example field FFF2</h3>
-                    <img class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
-                    <div class="p-4 text-xs shadow-2xl text lg:text-xl rounded-b-2xl" style=" box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <div>
-                            <p>2 Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed.
-                                Senectus blandit eu condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum quisque id donec elementum rhoncus sed aliquet accumsan.
-                            </p>
-
-                            <ul>
-                                <br> 2 Berufsfelder:
-                                <li>- xxxxxx</li>
-                                <li>- xxxxxx</li>
-                                <li>- xxxxxx</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <!--Carousel Element 3-->
-                <div class="hidden mx-5 mt-0 mySlides fade lg:mt-8 md:mt-6 sm:mx-20" style="max-width: 840px;">
-                    <h3 class="p-4 text-xl text-center numbertext lg:text-4xl m:mt-2 sm:mt-1 ">Example field FFF3</h3>
-                    <img class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
-                    <div class="p-4 text-xs shadow-2xl text lg:text-xl rounded-b-2xl" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <div>
-                            <p>3 Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed.
-                                Senectus blandit eu condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum quisque id donec elementum rhoncus sed aliquet accumsan.
-                            </p>
-
-                            <ul>
-                                <br> 3 Berufsfelder:
-                                <li>- xxxxxx</li>
-                                <li>- xxxxxx</li>
-                                <li>- xxxxxx</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!--Carousel Element 4-->
-                <div class="hidden mx-5 mt-0 mySlides fade lg:mt-8 md:mt-6 sm:mx-20" style="max-width: 840px;">
-                    <h3 class="p-4 text-xl text-center numbertext lg:text-4xl m:mt-2 sm:mt-1 ">Example field FFF4</h3>
-                    <img class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl " src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
-                    <div class="p-4 text-xs shadow-2xl text lg:text-xl rounded-b-2xl" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                        <div>
-                            <p>4 Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed.
-                                Senectus blandit eu condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum quisque id donec elementum rhoncus sed aliquet accumsan.
-                            </p>
-
-                            <ul>
-                                <br> 4 Berufsfelder:
-                                <li>- xxxxxx</li>
-                                <li>- xxxxxx</li>
-                                <li>- xxxxxx</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-                <a onclick="plusSlides(-1)" class="absolute inset-y-0 left-0 w-10 h-10 my-auto -ml-10 text-3xl font-bold text-center text-black rounded-full cursor-pointer prev md:ml-10 ">‹</a>
-                <a onclick="plusSlides(1)" class="absolute inset-y-0 right-0 w-10 h-10 my-auto -mr-10 text-3xl font-bold text-center text-black rounded-full cursor-pointer next md:mr-10 ">›</a>
-
+                <ul>
+                  <br />
+                  1 Berufsfelder:
+                  <li>- xxxxxx</li>
+                  <li>- xxxxxx</li>
+                  <li>- xxxxxx</li>
+                </ul>
+              </div>
             </div>
-            <!-- Add additional indicators for each slide-->
-            <ol class="left-0 right-0 block p-0 m-0 text-center text-gray-300 list-none align-center">
-                <li class="inline-block mr-3">
-                    <label class=" dot text-9xl hover:text-gray-50" onclick="currentSlide(1)">•</label>
-                </li>
-                <li class="inline-block mr-3 sm:text-l ">
-                    <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(2)">•</label>
-                </li>
-                <li class="inline-block mr-3 sm:text-l ">
-                    <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(3)">•</label>
-                </li>
-                <li class="inline-block mr-3 sm:text-l ">
-                    <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(4)">•</label>
-                </li>
-            </ol>
-        </div>
+          </div>
 
+          <!--Carousel Element 2-->
+          <div class="hidden mx-5 mt-0 mySlides fade lg:mt-8 md:mt-6 sm:mx-20" style="max-width: 840px">
+            <h3 class="p-4 text-xl text-center numbertext lg:text-4xl m:mt-2 sm:mt-1">Example field FFF2</h3>
+            <img
+              class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl"
+              src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp "
+            />
+            <div class="p-4 text-xs shadow-2xl text lg:text-xl rounded-b-2xl" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+              <div>
+                <p>
+                  2 Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit
+                  ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed. Senectus blandit eu
+                  condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum
+                  quisque id donec elementum rhoncus sed aliquet accumsan.
+                </p>
+
+                <ul>
+                  <br />
+                  2 Berufsfelder:
+                  <li>- xxxxxx</li>
+                  <li>- xxxxxx</li>
+                  <li>- xxxxxx</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--Carousel Element 3-->
+          <div class="hidden mx-5 mt-0 mySlides fade lg:mt-8 md:mt-6 sm:mx-20" style="max-width: 840px">
+            <h3 class="p-4 text-xl text-center numbertext lg:text-4xl m:mt-2 sm:mt-1">Example field FFF3</h3>
+            <img
+              class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl"
+              src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp "
+            />
+            <div class="p-4 text-xs shadow-2xl text lg:text-xl rounded-b-2xl" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+              <div>
+                <p>
+                  3 Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit
+                  ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed. Senectus blandit eu
+                  condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum
+                  quisque id donec elementum rhoncus sed aliquet accumsan.
+                </p>
+
+                <ul>
+                  <br />
+                  3 Berufsfelder:
+                  <li>- xxxxxx</li>
+                  <li>- xxxxxx</li>
+                  <li>- xxxxxx</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!--Carousel Element 4-->
+          <div class="hidden mx-5 mt-0 mySlides fade lg:mt-8 md:mt-6 sm:mx-20" style="max-width: 840px">
+            <h3 class="p-4 text-xl text-center numbertext lg:text-4xl m:mt-2 sm:mt-1">Example field FFF4</h3>
+            <img
+              class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl"
+              src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp "
+            />
+            <div class="p-4 text-xs shadow-2xl text lg:text-xl rounded-b-2xl" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+              <div>
+                <p>
+                  4 Sed ut perspiciatis unde omnis iste natus error sit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus velit
+                  ullamcorper elit in at nunc. Rhoncus, neque adipiscing scelerisque mattis facilisis phasellus in sed. Senectus blandit eu
+                  condimentum fringilla. Viverra at velit dictumst duis phasellus porta aliquet. Erat mauris morbi lacus, urna. Egestas elementum
+                  quisque id donec elementum rhoncus sed aliquet accumsan.
+                </p>
+
+                <ul>
+                  <br />
+                  4 Berufsfelder:
+                  <li>- xxxxxx</li>
+                  <li>- xxxxxx</li>
+                  <li>- xxxxxx</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <a
+            onclick="plusSlides(-1)"
+            class="absolute inset-y-0 left-0 w-10 h-10 my-auto -ml-10 text-3xl font-bold text-center text-black rounded-full cursor-pointer prev md:ml-10"
+            >‹</a
+          >
+          <a
+            onclick="plusSlides(1)"
+            class="absolute inset-y-0 right-0 w-10 h-10 my-auto -mr-10 text-3xl font-bold text-center text-black rounded-full cursor-pointer next md:mr-10"
+            >›</a
+          >
+        </div>
+        <!-- Add additional indicators for each slide-->
+        <ol class="left-0 right-0 block p-0 m-0 text-center text-gray-300 list-none align-center">
+          <li class="inline-block mr-3">
+            <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(1)">•</label>
+          </li>
+          <li class="inline-block mr-3 sm:text-l">
+            <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(2)">•</label>
+          </li>
+          <li class="inline-block mr-3 sm:text-l">
+            <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(3)">•</label>
+          </li>
+          <li class="inline-block mr-3 sm:text-l">
+            <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(4)">•</label>
+          </li>
+        </ol>
+      </div>
     </div>
-    
-   <!--Mobile navbar-->
-  <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
-    <div class="flex sm:hidden">
-      <button id="hamburger">
-        <i class='hidden text-4xl text-black toggle bx bx-x-circle dark:text-lightgrey'></i>
-        <i class='block text-4xl text-black toggle bx bx-menu-alt-left dark:text-lightgrey'></i>
-      </button>
+
+    <!--Mobile navbar-->
+    <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
+      <div class="flex sm:hidden">
+        <button id="hamburger">
+          <i class="hidden text-4xl text-black toggle bx bx-x-circle dark:text-lightgrey"></i>
+          <i class="block text-4xl text-black toggle bx bx-menu-alt-left dark:text-lightgrey"></i>
+        </button>
+      </div>
+      <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold dark:bg-darker">
+        <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+          <i class="pr-4 text-3xl bx bx-info-circle"></i>
+          Info
+        </a>
+        <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+          <i class="pr-4 text-3xl bx bx-book"></i>
+          Fächer
+        </a>
+        <a
+          href="/subpages/projects.html"
+          class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey"
+        >
+          <i class="pr-4 text-3xl bx bxs-component"></i>
+          Projekte
+        </a>
+        <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+          <i class="pr-4 text-3xl bx bxs-compass"></i>
+          Tour
+        </a>
+        <div class=""></div>
+        <a class="flex items-center justify-center h-12 border-black" href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+          <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR ANMELDUNG</h1>
+        </a>
+      </div>
+    </nav>
+
+    <!--Mobile Footer-->
+    <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden dark:bg-darkgrey">
+      <div>
+        <a href="" class="flex items-center text-2xl font-medium text-center text-black py--2 dark:text-lightgrey">
+          <i class="px-2 pt-1 pr-4 text-3xl bx bx-mail-send"></i>
+          Kontakt
+        </a>
+      </div>
+      <img class="p-0.5" src="/favicon.svg" alt="Systemechnik Logo" />
     </div>
-    <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold dark:bg-darker ">
-      <a href=""
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-        <i class='pr-4 text-3xl bx bx-info-circle'></i>
-        Info
-      </a>
-      <a href=""
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-        <i class='pr-4 text-3xl bx bx-book'></i>
-        Fächer
-      </a>
-      <a href="/subpages/projects.html"
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
-        <i class='pr-4 text-3xl bx bxs-component'></i>
-        Projekte
-      </a>
-      <a href=""
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-        <i class='pr-4 text-3xl bx bxs-compass'></i>
-        Tour
-      </a>
-      <div class=""></div>
-      <a class="flex items-center justify-center h-12 border-black"
-        href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-        <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR
-          ANMELDUNG
-        </h1>
-      </a>
-    </div>
-  </nav>
-      
-  <!--Mobile Footer-->
-  <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden dark:bg-darkgrey">
-    <div><a href="" class="flex items-center text-2xl font-medium text-center text-black py--2 dark:text-lightgrey">
-        <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i>
-        Kontakt
-      </a></div>
-    <img class="p-0.5" src="/favicon.svg" alt="Systemechnik Logo">
-  </div>
 
     <script type="module" src="/main.js"></script>
-</body>
-
+  </body>
 </html>

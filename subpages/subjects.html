@@ -1,214 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Informatik_</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-    rel="stylesheet">
-  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/css/style.css">
-  <title>Informatik_</title>
-</head>
-
-<body class="h-screen bg-white sm:flex">
-  <header class="fixed top-0 z-50 flex items-center w-full bg-white border-b-2 border-black h-11 sm:h-10">
-    <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
-      <button id="hamburger-full">
-        <i class='hidden text-4xl text-black bx toggle-full bx-menu-alt-left'></i>
-        <i class='text-4xl text-black toggle-full bx bx-x-circle'></i>
-      </button>
-    </a>
-    <a href="/index.html">
-      <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black">INFORMATIK<span class="animate-blink">_</span></h1>
-    </a>
-    <div class="fixed right-0 invisible border-l-2 border-black sm:visible">
-      <a href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-        <h1 class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black sm:visible hover:text-red">ZUR
-          ANMELDUNG
-        </h1>
+  <body class="h-screen bg-white sm:flex">
+    <header class="fixed top-0 z-50 flex items-center w-full bg-white border-b-2 border-black h-11 sm:h-10">
+      <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
+        <button id="hamburger-full">
+          <i class="hidden text-4xl text-black bx toggle-full bx-menu-alt-left"></i>
+          <i class="text-4xl text-black toggle-full bx bx-x-circle"></i>
+        </button>
       </a>
-    </div>
-
-  </header>
-  <!--Left Navigation Menu-->
-  <aside class="flex-col hidden sm:flex">
-    <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black toggle-full">
-      <nav class="flex flex-col px-2 pr-4 mt-10">
-        <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
-          <i class='pr-4 text-3xl bx bx-info-circle'></i>
-          Info
-        </a>
-        <a href="/subpages/subjects.html" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
-          <i class='pr-4 text-3xl bx bx-book'></i>
-          Fächer
-        </a>
-        <a href="/subpages/projects.html"
-          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
-          <i class='pr-4 text-3xl bx bxs-component'></i>
-          Projekte
-        </a>
-        <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
-          <i class='pr-4 text-3xl bx bxs-compass'></i>
-          Tour
-        </a>
-      </nav>
-      <!--Logo-->
-      <div class="flex-row w-full">
-        <img src="/favicon_dark.svg" alt="Systemechnik Logo" class="block m-auto">
-        <a href="" class="flex items-center w-full py-4 text-2xl font-medium text-center text-black">
-          <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i>
-          Kontakt
+      <a href="/index.html">
+        <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black">INFORMATIK<span class="animate-blink">_</span></h1>
+      </a>
+      <div class="fixed right-0 invisible border-l-2 border-black sm:visible">
+        <a href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+          <h1 class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black sm:visible hover:text-red">ZUR ANMELDUNG</h1>
         </a>
       </div>
-    </div>
-  </aside>
+    </header>
+    <!--Left Navigation Menu-->
+    <aside class="flex-col hidden sm:flex">
+      <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black toggle-full">
+        <nav class="flex flex-col px-2 pr-4 mt-10">
+          <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
+            <i class="pr-4 text-3xl bx bx-info-circle"></i>
+            Info
+          </a>
+          <a href="/subpages/subjects.html" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
+            <i class="pr-4 text-3xl bx bx-book"></i>
+            Fächer
+          </a>
+          <a href="/subpages/projects.html" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
+            <i class="pr-4 text-3xl bx bxs-component"></i>
+            Projekte
+          </a>
+          <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
+            <i class="pr-4 text-3xl bx bxs-compass"></i>
+            Tour
+          </a>
+        </nav>
+        <!--Logo-->
+        <div class="flex-row w-full">
+          <img src="/favicon_dark.svg" alt="Systemechnik Logo" class="block m-auto" />
+          <a href="" class="flex items-center w-full py-4 text-2xl font-medium text-center text-black">
+            <i class="px-2 pt-1 pr-4 text-3xl bx bx-mail-send"></i>
+            Kontakt
+          </a>
+        </div>
+      </div>
+    </aside>
 
-  <div id="mainpage" class="flex-grow py-5 mt-10 overflow-y-auto text-black sm:overflow-y-scroll">
+    <div id="mainpage" class="flex-grow py-5 mt-10 overflow-y-auto text-black sm:overflow-y-scroll">
+      <!--My Content-->
 
-    <!--My Content-->
+      <div class="grid grid-cols-1 gap-5 mx-auto sm:mx-20 place-items-auto">
+        <h1 class="items-center justify-center text-3xl font-bold text-center text-black">IT-Fächer</h1>
 
-    <div class="grid grid-cols-1 gap-5 mx-auto sm:mx-20 place-items-auto"> 
-      <h1 class="items-center justify-center text-3xl font-bold text-center text-black">IT-Fächer</h1>
+        <!--Fach-Dummy-->
 
-      <!--Fach-Dummy-->
-
-      <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-          <ul class="glide__slides">
-            <li class="glide__slide">
-              <div class="ml-5 mr-5 md:flex ">
-                <div class="md:flex">
-                  <img
-                  class="object-cover w-full mx-auto rounded-t-xl lg:rounded-l-xl lg:rounded-br-none lg:rounded-tr-none md:rounded-l-xl md:rounded-tr-none sm:rounded-b-none sm:rounded-t-xl"
-                  src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
-                  alt=""
-                  />
-                  <div class="w-full p-5 mb-20 bg-white border-4 shadow-inner sm:mb-0 border-gray-50 rounded-b-xl lg:rounded-r-xl lg:rounded-bl-none md:rounded-bl-none lg:rounded-tl-none md:rounded-r-xl sm:rounded-t-none sm:rounded-b-xl">
-                    <div class="inline-flex justify-center w-full">
-                      <i class="block text-4xl bx bx-code-curly" width="40"></i>
-                      <h2 class="block py-1 pl-1 text-2xl text-black">Your favourite subject</h2>
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide">
+                <div class="ml-5 mr-5 md:flex">
+                  <div class="md:flex">
+                    <img
+                      class="object-cover w-full mx-auto rounded-t-xl lg:rounded-l-xl lg:rounded-br-none lg:rounded-tr-none md:rounded-l-xl md:rounded-tr-none sm:rounded-b-none sm:rounded-t-xl"
+                      src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
+                      alt=""
+                    />
+                    <div
+                      class="w-full p-5 mb-20 bg-white border-4 shadow-inner sm:mb-0 border-gray-50 rounded-b-xl lg:rounded-r-xl lg:rounded-bl-none md:rounded-bl-none lg:rounded-tl-none md:rounded-r-xl sm:rounded-t-none sm:rounded-b-xl"
+                    >
+                      <div class="inline-flex justify-center w-full">
+                        <i class="block text-4xl bx bx-code-curly" width="40"></i>
+                        <h2 class="block py-1 pl-1 text-2xl text-black">Your favourite subject</h2>
+                      </div>
+                      <p class="text-gray-700 break-words text-1xl">
+                        Im POS (Programmieren und System-Engineering)-Unterricht lernt man grundlegende Kenntnisse des Programmierens mittels C# im
+                        .NET-Framework. Es sind keine Vorkenntnisse notwendig. Meistens geht es um kleine Konsolenapps bis zu ersten kleinen
+                        Projekten.
+                      </p>
+                      <p class="text-gray-700 break-words text-1xl">
+                        Stichworte: <br />
+                        C#, Compiler ,Visual Studio ,Klassen ,Methoden ,Wertetypen ,.NET ,MSdocs
+                      </p>
                     </div>
-                    <p class="text-gray-700 break-words text-1xl">Im POS (Programmieren und System-Engineering)-Unterricht lernt man grundlegende Kenntnisse 
-                    des Programmierens mittels C# im .NET-Framework.
-                    Es sind keine Vorkenntnisse notwendig. Meistens geht es um kleine Konsolenapps bis zu ersten kleinen Projekten.</p>
-                    <p class="text-gray-700 break-words text-1xl">Stichworte: <br> C#, Compiler ,Visual Studio ,Klassen ,Methoden ,Wertetypen ,.NET ,MSdocs</p>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="ml-5 mr-5 md:flex ">
-                <div class="md:flex">
-                  <img
-                  class="object-cover w-full mx-auto rounded-t-xl lg:rounded-l-xl lg:rounded-br-none lg:rounded-tr-none md:rounded-l-xl md:rounded-tr-none sm:rounded-b-none sm:rounded-t-xl"
-                  src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
-                  alt=""
-                  />
-                  <div class="w-full p-5 mb-20 bg-white border-4 shadow-inner sm:mb-0 border-gray-50 rounded-b-xl lg:rounded-r-xl lg:rounded-bl-none md:rounded-bl-none lg:rounded-tl-none md:rounded-r-xl sm:rounded-t-none sm:rounded-b-xl">
-                    <div class="inline-flex justify-center w-full">
-                      <i class="block text-4xl bx bx-code-curly" width="40"></i>
-                      <h2 class="block py-1 pl-1 text-2xl text-black">Your favourite subject</h2>
+              </li>
+              <li class="glide__slide">
+                <div class="ml-5 mr-5 md:flex">
+                  <div class="md:flex">
+                    <img
+                      class="object-cover w-full mx-auto rounded-t-xl lg:rounded-l-xl lg:rounded-br-none lg:rounded-tr-none md:rounded-l-xl md:rounded-tr-none sm:rounded-b-none sm:rounded-t-xl"
+                      src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
+                      alt=""
+                    />
+                    <div
+                      class="w-full p-5 mb-20 bg-white border-4 shadow-inner sm:mb-0 border-gray-50 rounded-b-xl lg:rounded-r-xl lg:rounded-bl-none md:rounded-bl-none lg:rounded-tl-none md:rounded-r-xl sm:rounded-t-none sm:rounded-b-xl"
+                    >
+                      <div class="inline-flex justify-center w-full">
+                        <i class="block text-4xl bx bx-code-curly" width="40"></i>
+                        <h2 class="block py-1 pl-1 text-2xl text-black">Your favourite subject</h2>
+                      </div>
+                      <p class="text-gray-700 break-words text-1xl">
+                        Im POS (Programmieren und System-Engineering)-Unterricht lernt man grundlegende Kenntnisse des Programmierens mittels C# im
+                        .NET-Framework. Es sind keine Vorkenntnisse notwendig. Meistens geht es um kleine Konsolenapps bis zu ersten kleinen
+                        Projekten.
+                      </p>
+                      <p class="text-gray-700 break-words text-1xl">
+                        Stichworte: <br />
+                        C#, Compiler ,Visual Studio ,Klassen ,Methoden ,Wertetypen ,.NET ,MSdocs
+                      </p>
                     </div>
-                    <p class="text-gray-700 break-words text-1xl">Im POS (Programmieren und System-Engineering)-Unterricht lernt man grundlegende Kenntnisse 
-                    des Programmierens mittels C# im .NET-Framework.
-                    Es sind keine Vorkenntnisse notwendig. Meistens geht es um kleine Konsolenapps bis zu ersten kleinen Projekten.</p>
-                    <p class="text-gray-700 break-words text-1xl">Stichworte: <br> C#, Compiler ,Visual Studio ,Klassen ,Methoden ,Wertetypen ,.NET ,MSdocs</p>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="glide__slide">
-              <div class="ml-5 mr-5 md:flex ">
-                <div class="md:flex">
-                  <img
-                  class="object-cover w-full mx-auto rounded-t-xl lg:rounded-l-xl lg:rounded-br-none lg:rounded-tr-none md:rounded-l-xl md:rounded-tr-none sm:rounded-b-none sm:rounded-t-xl"
-                  src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
-                  alt=""
-                  />
-                  <div class="w-full p-5 mb-20 bg-white border-4 shadow-inner sm:mb-0 border-gray-50 rounded-b-xl lg:rounded-r-xl lg:rounded-bl-none md:rounded-bl-none lg:rounded-tl-none md:rounded-r-xl sm:rounded-t-none sm:rounded-b-xl">
-                    <div class="inline-flex justify-center w-full">
-                      <i class="block text-4xl bx bx-code-curly" width="40"></i>
-                      <h2 class="block py-1 pl-1 text-2xl text-black">Your favourite subject</h2>
+              </li>
+              <li class="glide__slide">
+                <div class="ml-5 mr-5 md:flex">
+                  <div class="md:flex">
+                    <img
+                      class="object-cover w-full mx-auto rounded-t-xl lg:rounded-l-xl lg:rounded-br-none lg:rounded-tr-none md:rounded-l-xl md:rounded-tr-none sm:rounded-b-none sm:rounded-t-xl"
+                      src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
+                      alt=""
+                    />
+                    <div
+                      class="w-full p-5 mb-20 bg-white border-4 shadow-inner sm:mb-0 border-gray-50 rounded-b-xl lg:rounded-r-xl lg:rounded-bl-none md:rounded-bl-none lg:rounded-tl-none md:rounded-r-xl sm:rounded-t-none sm:rounded-b-xl"
+                    >
+                      <div class="inline-flex justify-center w-full">
+                        <i class="block text-4xl bx bx-code-curly" width="40"></i>
+                        <h2 class="block py-1 pl-1 text-2xl text-black">Your favourite subject</h2>
+                      </div>
+                      <p class="text-gray-700 break-words text-1xl">
+                        Im POS (Programmieren und System-Engineering)-Unterricht lernt man grundlegende Kenntnisse des Programmierens mittels C# im
+                        .NET-Framework. Es sind keine Vorkenntnisse notwendig. Meistens geht es um kleine Konsolenapps bis zu ersten kleinen
+                        Projekten.
+                      </p>
+                      <p class="text-gray-700 break-words text-1xl">
+                        Stichworte: <br />
+                        C#, Compiler ,Visual Studio ,Klassen ,Methoden ,Wertetypen ,.NET ,MSdocs
+                      </p>
                     </div>
-                    <p class="text-gray-700 break-words text-1xl">Im POS (Programmieren und System-Engineering)-Unterricht lernt man grundlegende Kenntnisse 
-                    des Programmierens mittels C# im .NET-Framework.
-                    Es sind keine Vorkenntnisse notwendig. Meistens geht es um kleine Konsolenapps bis zu ersten kleinen Projekten.</p>
-                    <p class="text-gray-700 break-words text-1xl">Stichworte: <br> C#, Compiler ,Visual Studio ,Klassen ,Methoden ,Wertetypen ,.NET ,MSdocs</p>
                   </div>
                 </div>
-              </div>
-            </li>
-          </ul>
-          <div class="glide__arrows" data-glide-el="controls">
-            <p class="glide__arrow glide__arrow--left" data-glide-dir="<">←</p>
-            <p class="glide__arrow glide__arrow--right" data-glide-dir=">">→</p>
+              </li>
+            </ul>
+            <div class="glide__arrows" data-glide-el="controls">
+              <p class="glide__arrow glide__arrow--left" data-glide-dir="<">←</p>
+              <p class="glide__arrow glide__arrow--right" data-glide-dir=">">→</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
- <!--Mobile navbar-->
- <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
-  <div class="flex sm:hidden">
-    <button id="hamburger">
-      <i class='hidden text-4xl text-black toggle bx bx-x-circle dark:text-lightgrey'></i>
-      <i class='block text-4xl text-black toggle bx bx-menu-alt-left dark:text-lightgrey'></i>
-    </button>
-  </div>
-  <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold dark:bg-darker ">
-    <a href=""
-      class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-      <i class='pr-4 text-3xl bx bx-info-circle'></i>
-      Info
-    </a>
-    <a href=""
-      class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-      <i class='pr-4 text-3xl bx bx-book'></i>
-      Fächer
-    </a>
-    <a href="/subpages/projects.html"
-      class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
-      <i class='pr-4 text-3xl bx bxs-component'></i>
-      Projekte
-    </a>
-    <a href=""
-      class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-      <i class='pr-4 text-3xl bx bxs-compass'></i>
-      Tour
-    </a>
-    <div class=""></div>
-    <a class="flex items-center justify-center h-12 border-black"
-      href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-      <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR
-        ANMELDUNG
-      </h1>
-    </a>
-  </div>
-</nav>
+    <!--Mobile navbar-->
+    <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
+      <div class="flex sm:hidden">
+        <button id="hamburger">
+          <i class="hidden text-4xl text-black toggle bx bx-x-circle dark:text-lightgrey"></i>
+          <i class="block text-4xl text-black toggle bx bx-menu-alt-left dark:text-lightgrey"></i>
+        </button>
+      </div>
+      <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold dark:bg-darker">
+        <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+          <i class="pr-4 text-3xl bx bx-info-circle"></i>
+          Info
+        </a>
+        <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+          <i class="pr-4 text-3xl bx bx-book"></i>
+          Fächer
+        </a>
+        <a
+          href="/subpages/projects.html"
+          class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey"
+        >
+          <i class="pr-4 text-3xl bx bxs-component"></i>
+          Projekte
+        </a>
+        <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+          <i class="pr-4 text-3xl bx bxs-compass"></i>
+          Tour
+        </a>
+        <div class=""></div>
+        <a class="flex items-center justify-center h-12 border-black" href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+          <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR ANMELDUNG</h1>
+        </a>
+      </div>
+    </nav>
 
-  <!--Mobile Footer-->
-  <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden">
-    <div><a href="" class="flex items-center text-2xl font-medium text-center text-black py--2">
-        <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i>
-        Kontakt
-      </a></div>
-    <img class="p-0.5" src="favicon_dark.svg" alt="Systemechnik Logo">
-  </div>
+    <!--Mobile Footer-->
+    <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden">
+      <div>
+        <a href="" class="flex items-center text-2xl font-medium text-center text-black py--2">
+          <i class="px-2 pt-1 pr-4 text-3xl bx bx-mail-send"></i>
+          Kontakt
+        </a>
+      </div>
+      <img class="p-0.5" src="/favicon_dark.svg" alt="Systemechnik Logo" />
+    </div>
 
-  <script type="module" src="/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-  
-<script>
-  const config = {
-    type:'slide',
-    perView: 1
-}
-  new Glide('.glide',config).mount();
-</script>
-</body>
+    <script type="module" src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
+    <script>
+      const config = {
+        type: "slide",
+        perView: 1,
+      };
+      new Glide(".glide", config).mount();
+    </script>
+  </body>
 </html>

@@ -14,7 +14,9 @@
     "vite": "^2.0.5"
   },
   "dependencies": {
+    "@barba/core": "^2.9.7",
     "@glidejs/glide": "^3.4.1",
+    "bowser": "^2.11.0",
     "tailwindcss-filters": "^3.0.0"
   }
 }
