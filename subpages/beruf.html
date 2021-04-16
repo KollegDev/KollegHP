@@ -121,8 +121,7 @@
     </aside>
 
     <!--Mainpage-->
-    <div id="mainpage" class="flex justify-center flex-grow pb-5 mt-10 overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey">
-
+    <div id="mainpage" class="flex justify-center flex-grow pb-5 mt-10 overflow-x-hidden overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey">
         <!--Carousel-->
         <div class="relative mx-8">
             <div class=" slideshow-container">
@@ -216,7 +215,7 @@
 
             </div>
             <!-- Add additional indicators for each slide-->
-            <ol class="left-0 right-0 z-10 block p-0 m-0 text-center text-gray-300 list-none align-center">
+            <ol class="left-0 right-0 block p-0 m-0 text-center text-gray-300 list-none align-center">
                 <li class="inline-block mr-3">
                     <label class=" dot text-9xl hover:text-gray-50" onclick="currentSlide(1)">•</label>
                 </li>
@@ -233,45 +232,54 @@
         </div>
 
     </div>
-    <!--Mobile navbar-->
-    <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
-        <div class="flex sm:hidden">
-            <button id="hamburger">
+    
+   <!--Mobile navbar-->
+  <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
+    <div class="flex sm:hidden">
+      <button id="hamburger">
         <i class='hidden text-4xl text-black toggle bx bx-x-circle dark:text-lightgrey'></i>
         <i class='block text-4xl text-black toggle bx bx-menu-alt-left dark:text-lightgrey'></i>
       </button>
-        </div>
-        <div class="flex flex-col w-screen h-screen bg-white divide-y toggle text-bold dark:bg-darker ">
-            <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-                <i class='pr-4 text-3xl bx bx-info-circle'></i> Info
-            </a>
-            <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-                <i class='pr-4 text-3xl bx bx-book'></i> Fächer
-            </a>
-            <a href="/subpages/projects.html" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
-                <i class='pr-4 text-3xl bx bxs-component'></i> Projekte
-            </a>
-            <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-                <i class='pr-4 text-3xl bx bxs-compass'></i> Tour
-            </a>
-            <div class=""></div>
-            <a class="flex items-center justify-center h-12 border-black" href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-                <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR ANMELDUNG
-                </h1>
-            </a>
-        </div>
-    </nav>
-
-    <!--Mobile Footer-->
-    <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden dark:bg-darker">
-        <div>
-            <a href="" class="flex items-center text-2xl font-medium text-center text-black py--2 dark:text-lightgrey">
-                <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i> Kontakt
-            </a>
-        </div>
-        <img class="p-0.5" src="/favicon.svg" alt="Systemechnik Logo">
-
     </div>
+    <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold dark:bg-darker ">
+      <a href=""
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+        <i class='pr-4 text-3xl bx bx-info-circle'></i>
+        Info
+      </a>
+      <a href=""
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+        <i class='pr-4 text-3xl bx bx-book'></i>
+        Fächer
+      </a>
+      <a href="/subpages/projects.html"
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
+        <i class='pr-4 text-3xl bx bxs-component'></i>
+        Projekte
+      </a>
+      <a href=""
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+        <i class='pr-4 text-3xl bx bxs-compass'></i>
+        Tour
+      </a>
+      <div class=""></div>
+      <a class="flex items-center justify-center h-12 border-black"
+        href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+        <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR
+          ANMELDUNG
+        </h1>
+      </a>
+    </div>
+  </nav>
+      
+  <!--Mobile Footer-->
+  <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden dark:bg-darkgrey">
+    <div><a href="" class="flex items-center text-2xl font-medium text-center text-black py--2 dark:text-lightgrey">
+        <i class='px-2 pt-1 pr-4 text-3xl bx bx-mail-send'></i>
+        Kontakt
+      </a></div>
+    <img class="p-0.5" src="/favicon.svg" alt="Systemechnik Logo">
+  </div>
 
     <script type="module" src="/main.js"></script>
 </body>

@@ -68,7 +68,7 @@
 
   <!--Mainpage-->
   <div id="mainpage" class="flex-grow pb-5 mt-10 overflow-y-auto text-black sm:overflow-y-scroll">
-    <div class="sm:flex mt-10 pl-12 pr-12 gap-8">
+    <div class="gap-8 pl-12 pr-12 mt-10 sm:flex">
       <div class="flex-col">        
           <img src="https://cdn.pixabay.com/photo/2017/08/02/01/11/people-2569404_1280.jpg" class="rounded-t-xl h-3/4 w-96" alt="Frau am Laptop" title="Frauen in der IT">
           <div class="h-16 w-96" 
@@ -102,11 +102,11 @@
         </div>
     </div>
 
-    <div class="sm:flex pt-10 pl-12 pr-12">
+    <div class="pt-10 pl-12 pr-12 sm:flex">
         <div class="flex flex-col gap-3">
           <div class="text-3xl font-semibold">Warum das Kolleg für Informatik-Systemtechnik der HTL Mödling?
           </div>
-            <p class="text-2xl mb-8">
+            <p class="mb-8 text-2xl">
                 Das Kolleg für Informatik-Systemtechnik an der HTL Mödling kombiniert erfolgreich Theorie und Praxis. 
                 Vermittelt werden Grundlagen und Konzepte mit Schwerpunkt auf Programmierung, Datenbanken, 
                 Netzwerktechnik und Medientechnik. Abgerundet wird das Programm durch Inhalte aus Systemplanung, 
@@ -125,20 +125,20 @@
         </div>
     </div>
 
-    <div class="sm:flex pl-12 pr-12">
+    <div class="pl-12 pr-12 sm:flex">
       <div class="flex flex-col gap-3">
-         <p class="text-2xl mt-5">
+         <p class="mt-5 text-2xl">
           Das Kolleg fokussiert sich besonders auf Kenntnisse und Fähigkeiten rund um Softwareentwicklung. 
           Es bleibt aber nicht nur bei der Technik. Moderne Konzepte aus dem Projektmanagement, wie z.B. Scrum, 
           werden ausführlich im Unterricht behandelt.
         </p>
-        <p class="text-2xl mb-5">
+        <p class="mb-5 text-2xl">
           Frauen gehören für uns einfach dazu. 
         </p>
         <p class="text-2xl">
           Noch nicht überzeugt?
         </p>
-        <p class="text-2xl mb-5">
+        <p class="mb-5 text-2xl">
           In den letzten Jahren blicken wir auf erfolgreiche Absolventinnen.
         </p>
             <div class="mt-10 text-3xl font-semibold">Testimonials
@@ -168,7 +168,7 @@
       </div>
     </div>
 
-    <div class="sm:flex pl-12 pt-8 pr-12 pb-8ya" >
+    <div class="pt-8 pl-12 pr-12 sm:flex pb-8ya" >
       <div class="flex flex-col">
         <div class="mt-12 text-3xl font-semibold">Initiativen
         </div>
@@ -184,11 +184,11 @@
             </div>
       </div>
       <div class="flex flex-col">
-        <p class="mt-28 mr-5 ml-5 text-2xl text-justify">
+        <p class="ml-5 mr-5 text-2xl text-justify mt-28">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
           invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
        </p>
-       <p class="mt-5 mr-5 ml-5 text-2xl text-justify">
+       <p class="mt-5 ml-5 mr-5 text-2xl text-justify">
           At vero eos et 
           accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata 
           sanctus est Lorem ipsum dolor sit amet. 
@@ -210,32 +210,35 @@
   <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
     <div class="flex sm:hidden">
       <button id="hamburger">
-        <i class='hidden text-4xl text-black toggle bx bx-x-circle'></i>
-        <i class='block text-4xl text-black toggle bx bx-menu-alt-left'></i>
+        <i class='hidden text-4xl text-black toggle bx bx-x-circle dark:text-lightgrey'></i>
+        <i class='block text-4xl text-black toggle bx bx-menu-alt-left dark:text-lightgrey'></i>
       </button>
     </div>
-    <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold">
-      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+    <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold dark:bg-darker ">
+      <a href=""
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
         <i class='pr-4 text-3xl bx bx-info-circle'></i>
         Info
       </a>
-      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+      <a href=""
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
         <i class='pr-4 text-3xl bx bx-book'></i>
         Fächer
       </a>
       <a href="/subpages/projects.html"
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left">
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
         <i class='pr-4 text-3xl bx bxs-component'></i>
         Projekte
       </a>
-      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+      <a href=""
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
         <i class='pr-4 text-3xl bx bxs-compass'></i>
         Tour
       </a>
       <div class=""></div>
       <a class="flex items-center justify-center h-12 border-black"
         href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-        <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red">ZUR
+        <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR
           ANMELDUNG
         </h1>
       </a>

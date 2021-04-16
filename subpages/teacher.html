@@ -15,7 +15,7 @@
 </head>
 
 <body class="h-screen bg-white sm:flex">
-  <header class="fixed top-0 flex items-center w-full bg-white border-b-2 border-black h-11 sm:h-10 z-10">
+  <header class="fixed top-0 z-10 flex items-center w-full bg-white border-b-2 border-black h-11 sm:h-10">
     <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
       <button id="hamburger-full">
         <i class='text-4xl text-black bx toggle-full bx-menu-alt-left'></i>
@@ -36,7 +36,7 @@
   </header>
   <!--Left Navigation Menu-->
   <div style="width: 160px;"></div>
-  <aside class="flex-col hidden sm:flex fixed left-0 bottom-0 top-0 z-0">
+  <aside class="fixed top-0 bottom-0 left-0 z-0 flex-col hidden sm:flex">
     <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black toggle-full">
       <nav class="flex flex-col px-2 pr-4 mt-10">
         <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
@@ -70,7 +70,7 @@
 
   <!--Mainpage-->
     <div id="top" class="lg:mx-auto">
-      <h3 id="first" class="p-4 mt-4 text-4xl font-light leading-relaxed tracking-tight text-center mt-10">Lorem ipsum dolor sit ahmet</h3>
+      <h3 id="first" class="p-4 mt-4 mt-10 text-4xl font-light leading-relaxed tracking-tight text-center">Lorem ipsum dolor sit ahmet</h3>
       <ul id="top-menu" class="md:visible sm:invisible" style="position: fixed; right: 5px; top: 20vh;">
         <li>
           <a href="#first" class="dot"></a>
@@ -89,12 +89,12 @@
 
       <!--Card one-->
       <div >
-        <div class="max-w-md lg:max-w-4xl w-full lg:flex content-center m-auto mt-10">
-          <div class="h-72 lg:h-72 lg:w-48 flex-none bg-cover rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none text-center overflow-hidden" style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
-          <div class="lg:border-t-4 border-r-4 lg:border-l-0 border-l-4 border-t-0 border-red-500 bg-white rounded-b-none lg:rounded-tr-2xl rounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+        <div class="content-center w-full max-w-md m-auto mt-10 lg:max-w-4xl lg:flex">
+          <div class="flex-none overflow-hidden text-center bg-cover h-72 lg:h-72 lg:w-48 rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none" style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
+          <div class="bg-white border-t-0 border-l-4 border-r-4 border-red-500 rounded-b-none rounded-tr-none lg:border-t-4 lg:border-l-0 lg:rounded-tr-2xl lg:rounded-b-none lg:rounded-br-none">
             <div class="p-2">
-              <div  class="text-black font-bold mb-2 text-4xl">J Jonah Jameson</div>
-              <p class="text-grey-darker text-2xl">"The trouble with me is I'm too soft-hearted! I'm always doing favors for everyone! 
+              <div  class="mb-2 text-4xl font-bold text-black">J Jonah Jameson</div>
+              <p class="text-2xl text-grey-darker">"The trouble with me is I'm too soft-hearted! I'm always doing favors for everyone! 
                 I'm just a big bundle of good-natured jelly! But no one ever appreciates it! It just doesn't pay to be a nice guy! 
                 The trouble with me is--I'm too sweet! That reminds me! 
                 It's time I was roasting Spider-Man's hide in an editorial again!"</p>
@@ -105,7 +105,7 @@
           style=" background: rgba(255, 255, 255, 0.1);
                   box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
                   backdrop-filter: blur(60.844px);"
-          class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2 mb-96">
+          class="w-full max-w-md p-2 m-auto lg:max-w-4xl lg:content-center rounded-b-2xl mb-96">
           <h1 class="font-bold">Card three</h1>
           <h2 id="second">Sed ut perspiciatis unde omnis iste natus error sit.</h2>
         </div>
@@ -113,12 +113,12 @@
 
         <!--Card two-->
       <div>
-        <div class="max-w-md lg:max-w-4xl w-full lg:flex flex-row-reverse content-center m-auto mt-96">
-          <div class="h-72 lg:h-72 lg:w-48 flex-none bg-cover rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl text-center overflow-hidden" style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
-          <div class="lg:border-t-4 w-full border-r-4 border-l-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none border-t-0 lg:rounded-tl-2xl border-red-500 bg-white rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+        <div class="flex-row-reverse content-center w-full max-w-md m-auto lg:max-w-4xl lg:flex mt-96">
+          <div class="flex-none overflow-hidden text-center bg-cover h-72 lg:h-72 lg:w-48 rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl" style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
+          <div class="w-full bg-white border-t-0 border-l-4 border-r-4 border-red-500 lg:border-t-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none lg:rounded-tl-2xl rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
             <div class="p-2">
-              <div class="text-black font-bold mb-2 text-4xl">Peter Parker</div>
-              <p class="text-grey-darker text-2xl">"I hate "</p>
+              <div class="mb-2 text-4xl font-bold text-black">Peter Parker</div>
+              <p class="text-2xl text-grey-darker">"I hate "</p>
             </div>
           </div>
         </div>
@@ -126,19 +126,19 @@
           style=" background: rgba(255, 255, 255, 0.1);
                   box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
                   backdrop-filter: blur(60.844px);"
-          class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2 mb-96">
+          class="w-full max-w-md p-2 m-auto lg:max-w-4xl lg:content-center rounded-b-2xl mb-96">
           <h1 class="font-bold">Card three</h1>
           <h2 id="three">Sed ut perspiciatis unde omnis iste natus error sit.</h2>
         </div>
         </div>
         <!--Card two-->
         <div>
-          <div class="max-w-md lg:max-w-4xl w-full lg:flex content-center m-auto mt-96">
-            <div class="h-72 lg:h-72 lg:w-48 flex-none bg-cover rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none text-center overflow-hidden" style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
-            <div class="lg:border-t-4 border-r-4 lg:border-l-0 border-l-4 border-t-0 border-red-500 bg-white rounded-b-none lg:rounded-tr-2xl rounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+          <div class="content-center w-full max-w-md m-auto lg:max-w-4xl lg:flex mt-96">
+            <div class="flex-none overflow-hidden text-center bg-cover h-72 lg:h-72 lg:w-48 rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none" style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
+            <div class="bg-white border-t-0 border-l-4 border-r-4 border-red-500 rounded-b-none rounded-tr-none lg:border-t-4 lg:border-l-0 lg:rounded-tr-2xl lg:rounded-b-none lg:rounded-br-none">
               <div class="p-2">
-                <div  class="text-black font-bold mb-2 text-4xl">J Jonah Jameson</div>
-                <p class="text-grey-darker text-2xl">"The trouble with me is I'm too soft-hearted! I'm always doing favors for everyone! 
+                <div  class="mb-2 text-4xl font-bold text-black">J Jonah Jameson</div>
+                <p class="text-2xl text-grey-darker">"The trouble with me is I'm too soft-hearted! I'm always doing favors for everyone! 
                   I'm just a big bundle of good-natured jelly! But no one ever appreciates it! It just doesn't pay to be a nice guy! 
                   The trouble with me is--I'm too sweet! That reminds me! 
                   It's time I was roasting Spider-Man's hide in an editorial again!"</p>
@@ -149,7 +149,7 @@
             style=" background: rgba(255, 255, 255, 0.1);
                     box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
                     backdrop-filter: blur(60.844px);"
-            class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2 mb-96">
+            class="w-full max-w-md p-2 m-auto lg:max-w-4xl lg:content-center rounded-b-2xl mb-96">
             <h1 id="four" class="font-bold">Card three</h1>
             <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
           </div>
@@ -157,12 +157,12 @@
 
         <!--Card two-->
       <div>
-        <div class="max-w-md lg:max-w-4xl w-full lg:flex flex-row-reverse content-center m-auto mt-96">
-          <div class="h-72 lg:h-72 lg:w-48 flex-none bg-cover rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl text-center overflow-hidden" style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
-          <div class="lg:border-t-4 w-full border-r-4 border-l-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none border-t-0 lg:rounded-tl-2xl border-red-500 bg-white rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+        <div class="flex-row-reverse content-center w-full max-w-md m-auto lg:max-w-4xl lg:flex mt-96">
+          <div class="flex-none overflow-hidden text-center bg-cover h-72 lg:h-72 lg:w-48 rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl" style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
+          <div class="w-full bg-white border-t-0 border-l-4 border-r-4 border-red-500 lg:border-t-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none lg:rounded-tl-2xl rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
             <div class="p-2">
-              <div class="text-black font-bold mb-2 text-4xl">Peter Parker</div>
-              <p class="text-grey-darker text-2xl">"I hate "</p>
+              <div class="mb-2 text-4xl font-bold text-black">Peter Parker</div>
+              <p class="text-2xl text-grey-darker">"I hate "</p>
             </div>
           </div>
         </div>
@@ -170,7 +170,7 @@
           style=" background: rgba(255, 255, 255, 0.1);
                   box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
                   backdrop-filter: blur(60.844px);"
-          class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2 mb-96">
+          class="w-full max-w-md p-2 m-auto lg:max-w-4xl lg:content-center rounded-b-2xl mb-96">
           <h1 class="font-bold">Card three</h1>
           <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
         </div>
@@ -224,32 +224,35 @@
   <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
     <div class="flex sm:hidden">
       <button id="hamburger">
-        <i class='hidden text-4xl text-black toggle bx bx-x-circle'></i> 
-        <i class='block text-4xl text-black toggle bx bx-menu-alt-left'></i>
+        <i class='hidden text-4xl text-black toggle bx bx-x-circle dark:text-lightgrey'></i>
+        <i class='block text-4xl text-black toggle bx bx-menu-alt-left dark:text-lightgrey'></i>
       </button>
     </div>
-    <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold">
-      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+    <div class="flex flex-col hidden w-screen h-screen bg-white divide-y toggle text-bold dark:bg-darker ">
+      <a href=""
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
         <i class='pr-4 text-3xl bx bx-info-circle'></i>
         Info
       </a>
-      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+      <a href=""
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
         <i class='pr-4 text-3xl bx bx-book'></i>
         Fächer
       </a>
-      <a href=""
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left">
+      <a href="/subpages/projects.html"
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
         <i class='pr-4 text-3xl bx bxs-component'></i>
         Projekte
       </a>
-      <a href="" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black">
+      <a href=""
+        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
         <i class='pr-4 text-3xl bx bxs-compass'></i>
         Tour
       </a>
       <div class=""></div>
       <a class="flex items-center justify-center h-12 border-black"
         href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-        <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red">ZUR
+        <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR
           ANMELDUNG
         </h1>
       </a>
