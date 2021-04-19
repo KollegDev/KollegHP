@@ -36,14 +36,16 @@
             }
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
+                //a single error will occure; please dismiss
             }
             for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" text-black", "");
+                dots[i].className = dots[i].className.replace("text-black", "");
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " text-black";
         }
     </script>
+
     <style>
         /* Fading animation */
         
@@ -74,7 +76,7 @@
     </style>
 </head>
 
-<body onload="showSlides(1)" class="h-screen bg-white sm:flex dark:bg-darker" data-barba="wrapper">
+<body class="h-screen bg-white sm:flex dark:bg-darker" data-barba="wrapper">
     <header class="fixed top-0 flex items-center w-full bg-white border-b-2 border-black dark:bg-darkgrey h-11 sm:h-10">
         <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
             <button id="hamburger-full">
@@ -238,7 +240,7 @@
             <!-- Add additional indicators for each slide-->
             <ol class="left-0 right-0 block p-0 m-0 text-center text-gray-300 list-none align-center">
                 <li class="inline-block mr-3">
-                    <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(1)">•</label>
+                    <label class="text-black dot text-9xl hover:text-gray-50" onclick="currentSlide(1)">•</label>
                 </li>
                 <li class="inline-block mr-3 sm:text-l">
                     <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(2)">•</label>
