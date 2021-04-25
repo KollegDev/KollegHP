@@ -3,96 +3,36 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/public/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="/public/css/style.css" />
     <title>Informatik_</title>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides((slideIndex += n));
-        }
-
-        function currentSlide(n) {
-            showSlides((slideIndex = n));
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = slides.length;
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace("text-black", "");
-            }
-            slides[slideIndex - 1].style.display = "block"; //a single error will occure; please dismiss
-            dots[slideIndex - 1].className += " text-black";
-            window.scrollTo(0, 0);
-        }
-    </script>
-
-    <style>
-        /* Fading animation */
-        
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 2s;
-            animation-name: fade;
-            animation-duration: 2s;
-        }
-        
-        @-webkit-keyframes fade {
-            from {
-                opacity: 0.2;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        @keyframes fade {
-            from {
-                opacity: 0.2;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
 </head>
 
 <body class="h-screen bg-white sm:flex dark:bg-darker" data-barba="wrapper">
     <header class="fixed top-0 flex items-center w-full bg-white border-b-2 border-black dark:bg-darkgrey h-11 sm:h-10">
         <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
             <button id="hamburger-full">
-        <i class="hidden text-4xl text-black bx toggle-full bx-menu-alt-left dark:text-lightgrey"></i>
-        <i class="text-4xl text-black toggle-full bx bx-x-circle dark:text-lightgrey"></i>
-      </button>
+          <i
+            class="hidden text-4xl text-black bx toggle-full bx-dots-vertical-rounded dark:text-lightgrey dark:hover:text-purple-400"></i>
+          <i
+            class="text-4xl text-black toggle-full bx bx-menu-alt-left dark:text-lightgrey dark:hover:text-purple-400"></i>
+        </button>
         </a>
         <a href="/index.html">
-            <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black dark:text-lightgrey">
+            <h1 class="invisible pl-2 text-2xl subpixel-antialiased font-bold text-center text-black sm:visible dark:text-lightgrey">
                 INFORMATIK<span class="animate-blink">_</span>
             </h1>
         </a>
         <div class="fixed right-0 invisible border-l-2 border-black sm:visible">
             <a href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-                <h1 class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black sm:visible hover:text-red dark:text-lightgrey dark:hover:text-blue-400">
+                <h1 class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black transition duration-200 ease-in-out transform sm:visible hover:text-red dark:text-lightgrey dark:hover:text-purple-400">
                     ZUR ANMELDUNG
                 </h1>
             </a>
@@ -103,10 +43,10 @@
         <div id="left-nav" class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black dark:bg-darkgrey toggle-full">
             <nav class="flex flex-col px-2 pr-4 mt-10">
                 <!-- <a href=""
-          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
-          <i class="pr-4 text-3xl bx bx-info-circle"></i>
-          Infos
-        </a> -->
+            class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
+            <i class="pr-4 text-3xl bx bx-info-circle"></i>
+            Infos
+          </a> -->
                 <a href="/subpages/subjects.html" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95 ">
                     <i class="pr-4 text-3xl bx bx-book"></i> Fächer
                 </a>
@@ -126,9 +66,9 @@
                     <i class="pr-4 text-3xl bx bx-female"></i> Frauen
                 </a>
                 <!-- <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
-            <i class="pr-4 text-3xl bx bxs-compass"></i>
-            Tour
-          </a> -->
+              <i class="pr-4 text-3xl bx bxs-compass"></i>
+              Tour
+            </a> -->
             </nav>
             <!--Logo-->
             <div class="flex-row w-full">
@@ -141,179 +81,138 @@
     </aside>
 
     <!--Mainpage-->
-    <div id="mainpage" class="flex justify-center flex-grow pb-5 mt-10 overflow-x-hidden overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey" data-barba="container" data-barba-namespace="home">
-        <!--Carousel-->
-        <div class="static mx-8">
-            <div class="flex slideshow-container">
-                <a onclick="plusSlides(-1)" class="fixed inset-y-0 left-0 w-10 h-10 my-auto text-5xl font-bold text-center text-black rounded-full cursor-pointer md:relative lg:relative prev md:ml-5">‹</a>
+    <div id="mainpage" class="flex-grow pb-5 mt-10 overflow-y-auto text-black sm:overflow-y-scroll dark:bg-darker dark:text-lightgrey" data-barba="container" data-barba-namespace="home">
+        <div class="justify-center mt-3 text-3xl font-semibold text-center">Berufsmöglichkeiten</div>
+        <div class="ml-8">
+            <div class="mt-10 lg:mt-20 lg:pl-20 lg:flex">
+                <div class="flex flex-col gap-2 lg:mr-32 lg:max-w-4xl">
+                    <div class="text-2xl font-semibold">Software-Development</div>
+                    <p class="mb-8 text-2xl">
+                        Logik- und Applikations-Entwicklung ist ein stets präsenter Bereich in der IT. Mobile-Apps, Computer-Programme und Skripte werden von Software-Entwicklern geschrieben und sind für alle Branchen zu essentiellen Mitteln geworden.
 
-                <!--Carousel Element 1-->
-
-                <div class="mx-5 mt-0 mySlides fade lg:mt-8 sm:max-w-xs md:mt-6 sm:mx-20" style="max-width: 840px">
-                    <h3 class="p-4 text-3xl text-center numbertext md:mt-2 sm:mt-1">Software-Development</h3>
-                    <img class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl" src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
-                    <div class="p-4 text-xl shadow-md text rounded-b-2xl">
-                        <div>
-                            <p>
-                                Logik- und Applikations-Entwicklung ist ein stets präsenter Bereich in der IT. Mobile-Apps, Computer-Programme und Skripte werden von Software-Entwicklern geschrieben und sind für alle Branchen zu essentiellen Mitteln geworden.
-                            </p>
-                            <br />Mögliche Berufsfelder:
-                            <ul class="ml-5 list-disc">
-
-                                <li>Applikationsentwicklung</li>
-                                <li>Spieleentwicklung</li>
-                                <li>Cyber-Security</li>
-                                <li>Algorithmusentwicklung</li>
-                                <li>Back-End-Developement</li>
-                            </ul>
-                        </div>
-                    </div>
+                    </p>
+                    <ul class="text-2xl list-disc">
+                        Mögliche Berufsfelder:
+                        <li>Applikationsentwicklung</li>
+                        <li>Spieleentwicklung</li>
+                        <li>Cyber-Security</li>
+                        <li>Algorithmusentwicklung</li>
+                        <li>Back-End-Developement</li>
+                    </ul>
                 </div>
-
-                <!--Carousel Element 2-->
-                <div class="hidden mx-5 mt-0 mySlides fade lg:mt-8 md:mt-6 sm:mx-20" style="max-width: 840px">
-                    <h3 class="p-4 text-3xl text-center numbertext md:mt-2 sm:mt-1">Web- und Media-Design</h3>
-                    <img class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl" src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
-                    <div class="p-4 text-xl shadow-2xl text rounded-b-2xl" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
-                        <div>
-                            <p>
-                                Für viele Unternehmen ist ein effizienter und kundenfreundlicher Web-Auftritt essentiell. Ob Online-Shop, Blog oder Portfolio-Website, alles ist gefragt. Ein Web-Developer entwirft oder setzt das Konzept der Website um. Foto-, Video- oder Audio-Editing-Kompetenzen
-                                werden ebenfalls benötigt um die Medien-Elemente zu bearbeiten.
-                            </p>
-
-                            <br />Mögliche Berufsfelder:
-                            <ul class="ml-5 list-disc">
-                                <li>Webdevelopment und -engineering</li>
-                                <li>Bild-, Video- und Audio-Editing</li>
-                                <li>Mediendistribution</li>
-                                <li>Medienproduktion</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="flex flex-col mr-10">
+                    <img src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp" class="w-96 rounded-xl" />
                 </div>
-
-                <!--Carousel Element 3-->
-                <div class="hidden mx-5 mt-0 mySlides fade lg:mt-8 md:mt-6 sm:mx-20" style="max-width: 840px">
-                    <h3 class="p-4 text-3xl text-center numbertext md:mt-2 sm:mt-1">Netzwerktechnik</h3>
-                    <img class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl" src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
-                    <div class="p-4 text-xl shadow-2xl text rounded-b-2xl" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
-                        <div>
-                            <p>
-                                In der Netzwerktechnik gibt es mehrere software- und hardware-technische Anforderungen und Aufgaben. Wartung, Ausbau oder neue Implementierung von ISP/Telefon-Technologien, Server-Instandhaltung oder Installation (HW: Antennen, Verkabelungen, Router,
-                                Switches) oder daraus resultierende administrative Verantwortungen (SW: Routing, Account-Management, Server-Wartung)
-                            </p>
-
-                            <br />Mögliche Berufsfelder:
-                            <ul class="ml-5 list-disc">
-                                <li>Netzwerk u. Telefontechnik</li>
-                                <li>Systemadministration</li>
-                                <li>Installations-, Wartungsservice</li>
-                                <li>Netzwerkkonfiguration</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Carousel Element 4-->
-                <div class="hidden mx-5 mt-0 mySlides fade lg:mt-8 md:mt-6 sm:mx-20" style="max-width: 840px">
-                    <h3 class="p-4 text-3xl text-center numbertext md:mt-2 sm:mt-1">Technical Support</h3>
-                    <img class="object-cover w-full lg:max-h-72 max-h-40 sm:max-h-40 rounded-t-2xl" src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp " />
-                    <div class="p-4 text-xl shadow-2xl text rounded-b-2xl" style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
-                        <div>
-                            <p>
-                                Im Bereich Technical Support geht es darum, Firmen oder einzelnen Menschen bei technischen bzw. digitalen Problemen zu helfen. Unterteilt wird es grob in 3 Level: First-, Second- und Third-Level-Support.
-                            </p>
-                            <br />
-                            <ul class="ml-5">
-                                <li>1st Level:<br /> Die Anfragen werden klassifiziert und je nach Komplexität und benötigten Ressourcen des Problems entweder sofort gelöst oder an höheren Support-Level weitergereicht.</li>
-                                <br />
-                                <li>2nd Level: <br />Zuständig für komplexere Probleme, die eventuell Software-Installation benötigen.</li>
-                                <br />
-                                <li>3rd Level: <br />Komplexe neuaufgetretene Probleme werden von spezialisierte Teams behandelt und Lösungen werden ermittelt. Dabei muss eine Kommunikation zwischen den Teammitgliedern aufrechterhalten werden, sowie auch
-                                    die Einzelaufgaben und Schnittstellen zuvor oder laufend definiert werden.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <a onclick="plusSlides(1)" class="fixed inset-y-0 right-0 w-10 h-10 my-auto text-5xl font-bold text-center text-black rounded-full cursor-pointer md:relative lg:relative next md:mr-5">›</a>
-
             </div>
-            <!-- Add additional indicators for each slide-->
-            <ol class="left-0 right-0 block p-0 m-0 text-center text-gray-300 list-none align-center">
-                <li class="inline-block mr-3">
-                    <label class="text-black dot text-9xl hover:text-gray-50" onclick="currentSlide(1)">•</label>
-                </li>
-                <li class="inline-block mr-3 sm:text-l">
-                    <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(2)">•</label>
-                </li>
-                <li class="inline-block mr-3 sm:text-l">
-                    <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(3)">•</label>
-                </li>
-                <li class="inline-block mr-3 sm:text-l">
-                    <label class="dot text-9xl hover:text-gray-50" onclick="currentSlide(4)">•</label>
-                </li>
-            </ol>
+            <br/>
+            <div class="lg:pl-20 lg:mt-10 lg:flex">
+                <div class="flex flex-col gap-3 mr-10">
+                    <img src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp" class="w-96 rounded-xl" />
+                </div>
+                <div class="flex flex-col gap-3 lg:mr-32 lg:max-w-4xl">
+                    <div class="text-2xl font-semibold">Webdevelopment und Media-Design</div>
+                    <p class="mb-8 text-2xl">
+                        Für viele Unternehmen ist ein effizienter und kundenfreundlicher Web-Auftritt essentiell. Ob Online-Shop, Blog oder Portfolio-Website, alles ist gefragt. Ein Web-Developer entwirft oder setzt das Konzept der Website um. Foto-, Video- oder Audio-Editing-Kompetenzen
+                        werden ebenfalls benötigt um die Medien-Elemente zu bearbeiten.
+
+                    </p>
+                    <ul class="text-2xl list-disc">
+                        Mögliche Berufsfelder:
+                        <li>Webdevelopment und -engineering</li>
+                        <li>Bild-, Video- und Audio-Editing</li>
+                        <li>Mediendistribution</li>
+                        <li>Medienproduktion</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lg:pl-20 lg:mt-20 lg:flex">
+                <div class="flex flex-col gap-2 lg:mr-32 lg:max-w-4xl">
+                    <div class="text-2xl font-semibold">Netzwerktechnik</div>
+                    <p class="mb-8 text-2xl">
+                        In der Netzwerktechnik gibt es mehrere software- und hardware-technische Anforderungen und Aufgaben. Wartung, Ausbau oder neue Implementierung von ISP/Telefon-Technologien, Server-Instandhaltung oder Installation (HW: Antennen, Verkabelungen, Router,
+                        Switches) oder daraus resultierende administrative Verantwortungen (SW: Routing, Account-Management, Server-Wartung)
+
+                    </p>
+                    <ul class="text-2xl list-disc">
+                        Mögliche Berufsfelder:
+                        <li>Netzwerk-/Telefontechnik</li>
+                        <li> Systemadministration</li>
+                        <li>Installations-, Wartungsservice</li>
+                        <li>Netzwerkkonfiguration</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col mr-10">
+                    <img src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp" class="w-96 rounded-xl" />
+
+                </div>
+            </div>
+            <br/>
+            <div class="lg:pl-20 lg:mt-10 lg:flex">
+                <div class="flex flex-col gap-3 mr-10">
+                    <img src="https://media.discordapp.net/attachments/619177279502680067/821073604884037632/photo-1579403124614-197f69d8187b.webp" class="w-96 rounded-xl" />
+                </div>
+                <div class="flex flex-col gap-3 lg:mr-32 lg:max-w-4xl">
+                    <div class="text-2xl font-semibold">Technical Support</div>
+                    <p class="mb-4 text-2xl">
+                        Im Bereich Technical Support geht es darum, Firmen oder einzelnen Menschen bei technischen bzw. digitalen Problemen zu helfen. Unterteilt wird es grob in 3 Level: First-, Second- und Third-Level-Support.
+                    </p>
+                    <ul class="text-2xl">
+                        <li class="mb-2">First-Level-Support:<br/> Die Anfragen werden klassifiziert und je nach Komplexität und benötigten Ressourcen des Problems entweder sofort gelöst oder an höheren Support-Level weitergereicht.</li>
+                        <li class="mb-2">Second-Level-Support:<br/> Zuständig für komplexere Probleme, die eventuell Software-Installation benötigen.</li>
+                        <li class="mb-2">Third-Level-Support:<br/> Komplexe neuaufgetretene Probleme werden von spezialisierte Teams behandelt und Lösungen werden ermittelt. Dabei muss eine Kommunikation zwischen den Teammitgliedern aufrechterhalten werden, sowie auch
+                            die Einzelaufgaben und Schnittstellen zuvor oder laufend definiert werden.</li>
+
+                    </ul>
+                </div>
+            </div>
         </div>
+
     </div>
 
     <!--Mobile navbar-->
-    <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
+    <nav class="fixed top-0 flex flex-wrap sm:hidden">
         <div class="flex sm:hidden">
             <button id="hamburger">
-        <i class="hidden text-4xl text-black toggle bx bx-menu-alt-left dark:text-lightgrey"></i>
-        <i class="block text-4xl text-black toggle bx bx-dots-vertical-rounded dark:text-lightgrey"></i>
-      </button>
+            <i id="openMenu" class="block text-4xl text-black bx bx-menu-alt-left dark:text-lightgrey"></i>
+            <i id="closeMenu" class="hidden text-4xl text-black bx bx-dots-vertical-rounded dark:text-lightgrey"></i>
+          </button>
+            <a href="/index.html">
+                <h1 class="pt-1 text-2xl subpixel-antialiased font-bold text-black dark:text-lightgrey">
+                    IT<span class="animate-blink">_</span>
+                </h1>
+            </a>
+            <a class="fixed right-0 h-12 border-black" href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+                <h1 class="right-0 pt-1 mr-5 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR ANMELDUNG
+                </h1>
+            </a>
         </div>
-        <div class="flex flex-col w-screen h-screen bg-white divide-y toggle text-bold dark:bg-darker">
-            <!-- <a href=""
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-        <i class="pr-4 text-3xl bx bx-info-circle"></i>
-        Info
-      </a>
-      -->
-            <a href="/subpages/subjects.html" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+        <div id="transMenu" class="flex flex-col w-screen h-screen duration-300 -translate-x-full bg-white text-bold dark:bg-darker">
+            <a href="/subpages/subjects.html" class="flex items-center h-10 py-2 mx-auto text-2xl font-medium text-black border-b-2 border-black dark:text-lightgrey">
                 <i class="pr-4 text-3xl bx bx-book"></i> Fächer
             </a>
-            <a href="/subpages/teacher.html" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+            <a href="/subpages/teacher.html" class="flex items-center h-10 py-2 mx-auto mt-3 text-2xl font-medium text-black border-b-2 border-black dark:text-lightgrey">
                 <i class="pr-4 text-3xl bx bxs-school"></i> Lehrer
             </a>
-            <a href="/subpages/projects.html" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+            <a href="/subpages/projects.html" class="flex items-center h-10 py-2 mx-auto mt-3 text-2xl font-medium text-black border-b-2 border-black dark:text-lightgrey">
                 <i class="pr-4 text-3xl bx bxs-component"></i> Projekte
             </a>
-            <a href="/subpages/graduates.html" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+            <a href="/subpages/graduates.html" class="flex items-center h-10 py-2 mx-auto mt-3 text-2xl font-medium text-black border-b-2 border-black dark:text-lightgrey">
                 <i class="pr-4 text-3xl bx bxs-graduation"></i> Schüler
             </a>
-            <a href="/subpages/jobs.html" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
+            <a href="/subpages/jobs.html" class="flex items-center h-10 py-2 mx-auto mt-3 text-2xl font-medium text-black border-b-2 border-black justify-left dark:text-lightgrey">
                 <i class="pr-4 text-3xl bx bx-briefcase"></i> Berufe
             </a>
-            <a href="/subpages/women.html" class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
+            <a href="/subpages/women.html" class="flex items-center h-10 py-2 mx-auto mt-3 text-2xl font-medium text-black border-b-2 border-black justify-left dark:text-lightgrey">
                 <i class="pr-4 text-3xl bx bx-female"></i> Frauen
             </a>
-            <!--
-        <a href=""
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-        <i class="pr-4 text-3xl bx bxs-compass"></i>
-        Tour
-      </a>
-    -->
-            <div class=""></div>
-            <a class="flex items-center justify-center h-12 border-black" href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-                <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR ANMELDUNG
-                </h1>
+            <a href="/subpages/contact.html" class="flex items-center h-10 py-2 mx-auto mt-3 text-2xl font-medium text-black border-b-2 border-black justify-left dark:text-lightgrey">
+                <i class="pr-4 text-3xl bx bx-mail-send"></i> Kontakt
             </a>
         </div>
     </nav>
 
-    <!--Mobile Footer-->
-    <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden dark:bg-darkgrey">
-        <div>
-            <a href="" class="flex items-center text-2xl font-medium text-center text-black py--2 dark:text-lightgrey">
-                <i class="px-2 pt-1 pr-4 text-3xl bx bx-mail-send"></i> Kontakt
-            </a>
-        </div>
-        <img class="p-0.5" src="/favicon.svg" alt="Systemechnik Logo" />
-    </div>
-
+    <!--barba-->
     <script type="module" src="/main.js"></script>
     <script>
         barba.init({
