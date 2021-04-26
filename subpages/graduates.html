@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,60 +10,98 @@
     rel="stylesheet" />
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/public/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <title>Informatik_</title>
+  <style>
+    .smear {
+      margin-top: -10px;
+    }
+
+    @supports (-moz-appearance: none) {
+      .smear {
+        margin-top: 0;
+      }
+    }
+  </style>
 </head>
 
-
-<body class="h-screen bg-white sm:flex">
-  <header class="fixed top-0 flex items-center w-full bg-white border-b-2 border-black h-11 sm:h-10">
+<body class="h-screen bg-white sm:flex dark:bg-darker" data-barba="wrapper">
+  <header class="fixed top-0 flex items-center w-full bg-white border-b-2 border-black dark:bg-darkgrey h-11 sm:h-10">
     <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
       <button id="hamburger-full">
-        <i class='text-4xl text-black bx toggle-full bx-menu-alt-left'></i>
-        <i class='hidden text-4xl text-black toggle-full bx bx-x-circle'></i>
+        <i
+          class="hidden text-4xl text-black bx toggle-full bx-dots-vertical-rounded dark:text-lightgrey dark:hover:text-purple-400"></i>
+        <i
+          class="text-4xl text-black toggle-full bx bx-menu-alt-left dark:text-lightgrey dark:hover:text-purple-400"></i>
       </button>
     </a>
     <a href="/index.html">
-      <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black">INFORMATIK<span class="animate-blink">_</span></h1>
+      <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black dark:text-lightgrey">
+        INFORMATIK<span class="animate-blink">_</span>
+      </h1>
     </a>
     <div class="fixed right-0 invisible border-l-2 border-black sm:visible">
       <a href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-        <h1 class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black sm:visible hover:text-red">ZUR
-          ANMELDUNG
+        <h1
+          class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black transition duration-200 ease-in-out transform sm:visible hover:text-red dark:text-lightgrey dark:hover:text-purple-400">
+          ZUR ANMELDUNG
         </h1>
       </a>
     </div>
-
-    
   </header>
   <!--Left Navigation Menu-->
   <aside class="flex-col hidden sm:flex">
-    <div class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black toggle-full">
+    <div id="left-nav"
+      class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black dark:bg-darkgrey toggle-full">
       <nav class="flex flex-col px-2 pr-4 mt-10">
-        <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
-          <i class='pr-4 text-3xl bx bx-info-circle'></i>
-          Info
-        </a>
-        <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
-          <i class='pr-4 text-3xl bx bx-book'></i>
+        <!-- <a href=""
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
+          <i class="pr-4 text-3xl bx bx-info-circle"></i>
+          Infos
+        </a> -->
+        <a href="/subpages/subjects.html"
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95 ">
+          <i class="pr-4 text-3xl bx bx-book"></i>
           Fächer
         </a>
+        <a href="/subpages/teacher.html"
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
+          <i class="pr-4 text-3xl bx bxs-school"></i>
+          Lehrer
+        </a>
         <a href="/subpages/projects.html"
-          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
-          <i class='pr-4 text-3xl bx bxs-component'></i>
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-105">
+          <i class="pr-4 text-3xl bx bxs-component"></i>
           Projekte
         </a>
-        <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black">
-          <i class='pr-4 text-3xl bx bxs-compass'></i>
-          Tour
+        <a href="/subpages/graduates.html"
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
+          <i class="pr-4 text-3xl bx bxs-graduation"></i>
+          Schüler
         </a>
+        <a href="/subpages/jobs.html"
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
+          <i class="pr-4 text-3xl bx bx-briefcase"></i>
+          Berufe
+        </a>
+        <a href="/subpages/women.html"
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
+          <i class="pr-4 text-3xl bx bx-female"></i>
+          Frauen
+        </a>
+        <!-- <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
+            <i class="pr-4 text-3xl bx bxs-compass"></i>
+            Tour
+          </a> -->
       </nav>
-
       <!--Logo-->
       <div class="flex-row w-full">
-        <img src="/favicon_dark.svg" alt="Systemechnik Logo" class="block m-auto" />
+        <img src="/favicon.svg" alt="Systemechnik Logo" class="block m-auto " />
         <a href="/subpages/contact.html"
-          class="flex items-center w-full py-4 text-2xl font-medium text-center text-black">
+          class="flex items-center w-full py-4 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
           <i class="px-2 pt-1 pr-4 text-3xl bx bx-mail-send"></i>
           Kontakt
         </a>
@@ -71,7 +109,7 @@
     </div>
   </aside>
 
-  <!--Mainpage-->
+
   <ul id="top-menu" class="sm:visible md:invisible" style="position: fixed; right: 5px; top: 20vh;">
     <li>
       <a href="#first" class="dot"></a>
@@ -84,26 +122,21 @@
     </li>
   </ul>
 
-  <div id="mainpage" class="flex-grow mt-10 overflow-y-auto text-black sm:overflow-y-scroll">
+  <!--Mainpage-->
+  <div id="mainpage" class="flex-grow mt-10 overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey"
+    data-barba="container" data-barba-namespace="projects">
+
     <h3 class="p-4 mt-4 text-4xl font-light leading-relaxed tracking-tight text-center">Lorem ipsum dolor sit ahmet</h3>
     <div class="">
       <!--Card one-->
       <div>
         <div class="max-w-md lg:max-w-4xl w-full lg:flex content-center m-auto mt-10" id="first">
-          <div class="h-72 lg:h-72 lg:w-48 flex-none bg-cover rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none text-center overflow-hidden" style="background-image: url('')"></div>
-          <div class="lg:border-t-4 border-r-4 w-full lg:border-l-0 border-l-4 border-t-0 border-red-500 bg-white rounded-b-none lg:rounded-tr-2xl rounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+          <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-center rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none text-center overflow-hidden" style="background-image: url('');"></div>
+          <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full lg:border-l-0 border-l-4 border-t-0 border-red-500 rounded-b-none lg:rounded-tr-2xl rounded-tr-none lg:rounded-b-none lg:rounded-br-none">
             <div class="p-2">
-              <div class="text-black font-bold mb-2 text-4xl">Hannes Schiemer-Peham</div>
+              <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Coming Soon</h2>
               <p class="text-grey-darker text-2xl">
-                Schnittstellen-Entwicklung im Bereich Daten-Management, teilweise Energie-Management und Monitoring.<br><br>
-                Durch das Informatik-Kolleg konnten wir eine große Basis an Wissen in vielen Bereichen der IT aufbauen. 
-                Ohne diese Basis – denke ich – hätte ich wenig Chancen gehabt in das Berufsleben in diesem Bereich einsteigen zu können.<br><br>
-                Vor dem Kolleg habe ich in einem Hotel  gearbeitet und war für Reservierungen/Preise/Verträge zuständig.<br><br> 
-                Ich fand es wunderbar, dass die Professorinnen und Professoren sich in unsere Lage versetzen konnten, da die meisten 
-                von uns keine Vorgeschichte mit dem Thema IT hatten. Sie haben uns dazu motiviert und uns in relativ kurzer Zeit viel Wissen vermittelt. 
-                Ich fand unsere Schülerinnen und Schüler toll, weil wir ein starkes Team gebildet haben, in dem jeder die Stärken und Schwächen des anderen 
-                akzeptiert hatte und wir uns gegenseitig unterstützt und geholfen haben. 
-
+                Noch keine Daten!
               </p>
             </div>
           </div>
@@ -113,48 +146,14 @@
                   box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
                   backdrop-filter: blur(60.844px);"
           class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="second">
-          <h1 class="font-bold">Card three</h1>
-          <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+          <h1 class="font-bold"></h1>
+          <h2></h2>
         </div>
         </div>
 
-        <!--Card two-->
-      <div>
-        <div class="max-w-md lg:max-w-4xl w-full lg:flex flex-row-reverse content-center m-auto mt-10" >
-          <div class="h-72 lg:h-72 lg:w-48 flex-none bg-cover rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl text-center overflow-hidden" style="background-image: url('')"></div>
-          <div class="lg:border-t-4 border-r-4 w-full border-l-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none border-t-0 lg:rounded-tl-2xl border-red-500 bg-white rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
-            <div class="p-2">
-              <div class="text-black font-bold mb-2 text-4xl">Andreas Vollnhofer</div>
-              <p class="text-grey-darker text-2xl">
-                Webentwickler bei 1000PS Internet GmbH, der stärksten Motorrad Seite im Internet.<br><br>
-                Das Kolleg war praktisch meine einzige Chance mich beruflich neu zu orientieren und auch 
-                eine Voraussetzung dafür, meine aktuelle Anstellung zu erhalten.<br><br>
-                Ich hatte 1997 meine Reife- und Diplomprüfung an der HTL für Elektrotechnik
-                 in Wiener Neustadt abgeschlossen und nach meinem Präsenzdienst war ich mehr als 20 Jahre im technischen Vertrieb tätig.<br><br>
-                 Dass keine fachlichen Kenntnisse vorausgesetzt wurden, das sehr umfangreiche Ausbildungsprogramm und die Möglichkeit seine 
-                 eigenen Interessen bei Projekten einzubringen.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div
-          style=" background: rgba(255, 255, 255, 0.1);
-                  box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
-                  backdrop-filter: blur(60.844px);"
-          class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="three">
-          <h1 class="font-bold">Card three</h1>
-          <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
-        </div>
-        </div>
- 
-      <!--Text-->
-      <div class="flex flex-wrap">        
-      </div>
     </div>
-
-    
-    <div class="md:invisible sm:visible h-10 w-full"></div>
   </div>
+
 
   <!--Mobile navbar-->
   <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
@@ -191,7 +190,7 @@
         <i class="pr-4 text-3xl bx bxs-graduation"></i>
         Schüler
       </a>
-      <a href="/subpages/beruf.html"
+      <a href="/subpages/jobs.html"
         class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
         <i class="pr-4 text-3xl bx bx-briefcase"></i>
         Berufe
@@ -218,17 +217,48 @@
   </nav>
 
   <!--Mobile Footer-->
-  <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden">
+  <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden dark:bg-darkgrey">
     <div>
-      <a href="/subpages/contact.html" class="flex items-center text-2xl font-medium text-center text-black py--2">
+      <a href="/subpages/contact.html"
+        class="flex items-center text-2xl font-medium text-center text-black py--2 dark:text-lightgrey">
         <i class="px-2 pt-1 pr-4 text-3xl bx bx-mail-send"></i>
         Kontakt
       </a>
     </div>
-    <img class="p-0.5" src="/favicon_dark.svg" alt="Systemechnik Logo" />
+    <img class="p-0.5" src="/favicon.svg" alt="Systemechnik Logo" />
   </div>
 
   <script type="module" src="/main.js"></script>
+  <script>
+    barba.init({
+      transitions: [{
+        name: 'default-transition',
+        enter(data) {
+          let animate = anime({
+            targets: data.next.container,
+            opacity: 0,
+            // Property Parameters
+            duration: 200,
+            easing: 'linear',
+            // Animation Parameters
+            direction: 'reverse'
+          });
+        },
+        leave(data) {
+          let animate = anime({
+            targets: data.current.container,
+            targets: data.next.container,
+            opacity: 0,
+            // Property Parameters
+            duration: 200,
+            easing: 'linear',
+            // Animation Parameters
+            direction: 'normal'
+          });
+        },
+      }]
+    });
+  </script>
   <script>
   //scrollspy
   var lastId,
@@ -276,6 +306,14 @@
   }
   .active .dot{
     background-color: rgba(0, 0, 0, 0.692) !important;
+  }
+  .picture{
+    height: revert;
+  }
+  @media only screen and (max-width: 1024px) {
+    .picture{
+      height: 24rem;
+    }
   }
   </style>
 </body>
