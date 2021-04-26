@@ -22,11 +22,9 @@ document.getElementById("hamburger-full").onclick = function toggleMenu() {
   NavToggle(document.getElementsByClassName("toggle-full"));
 };
 
-document.getElementById('hamburger').addEventListener('click',function()
-  {
-    document.getElementById('transMenu').classList.toggle('transform-gpu');
-    document.getElementById('openMenu').classList.toggle("hidden");
-    document.getElementById('closeMenu').classList.toggle("hidden");
-  }
-  );
 
+document.getElementById("ham").onclick = function() {ToggleNav()};
+  function ToggleNav() {
+    document.getElementById("ham").classList.toggle("is-active");
+    document.getElementById('transMenu').classList.toggle('transform-gpu');
+  }
