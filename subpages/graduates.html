@@ -110,23 +110,12 @@
   </aside>
 
 
-  <ul id="top-menu" class="sm:visible md:invisible" style="position: fixed; right: 5px; top: 20vh;">
-    <li>
-      <a href="#first" class="dot"></a>
-    </li>
-    <li>
-      <a href="#second" class="dot"></a>
-    </li>
-    <li>
-      <a href="#three" class="dot"></a>
-    </li>
-  </ul>
-
+  
   <!--Mainpage-->
   <div id="mainpage" class="flex-grow mt-10 overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey"
     data-barba="container" data-barba-namespace="projects">
 
-    <h3 class="p-4 mt-4 text-4xl font-light leading-relaxed tracking-tight text-center">Lorem ipsum dolor sit ahmet</h3>
+    <h3 class="p-4 mt-4 text-4xl font-light leading-relaxed tracking-tight text-center">Alumni</h3>
     <div class="">
       <!--Card one-->
       <div>
@@ -294,54 +283,7 @@
       }]
     });
   </script>
-  <script>
-  //scrollspy
-  var lastId,
-      topMenu = $("#top-menu"),
-      topMenuHeight = topMenu.outerHeight()+15,
-      menuItems = topMenu.find("a"),
-      scrollItems = menuItems.map(function(){
-        var item = $($(this).attr("href"));
-        if (item.length) { return item; }
-      });
-  menuItems.click(function(e){
-    var href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-    $('html, body').stop().animate({ 
-        scrollTop: offsetTop
-    }, 300);
-    e.preventDefault();
-  });
-  $(window).scroll(function(){
-    var fromTop = $(this).scrollTop()+topMenuHeight;
-    var cur = scrollItems.map(function(){
-      if ($(this).offset().top < fromTop)
-        return this;
-    });
-    cur = cur[cur.length-1];
-    var id = cur && cur.length ? cur[0].id : "";
-    
-    if (lastId !== id) {
-        lastId = id;
-        menuItems
-          .parent().removeClass("active")
-          .end().filter("[href='#"+id+"']").parent().addClass("active");
-    }                   
-  });
-</script>
-<style>
-  .dot{
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: block;
-    margin-top:0.1rem;
-    opacity: 0.4;
-  }
-  .active .dot{
-    background-color: rgba(0, 0, 0, 0.692) !important;
-  }
+  <style>
   .picture{
     height: revert;
   }
