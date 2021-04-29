@@ -9,7 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet" />
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/public/css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/style.css"  />
   <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <title>Informatik_</title>
@@ -26,7 +27,7 @@
       </button>
     </a>
     <a href="/index.html">
-      <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black dark:text-lightgrey">
+      <h1 class="invisible pl-2 text-2xl subpixel-antialiased font-bold text-center text-black sm:visible dark:text-lightgrey">
         INFORMATIK<span class="animate-blink">_</span>
       </h1>
     </a>
@@ -97,82 +98,80 @@
   </aside>
 
   <!--Mainpage-->
-  <div id="mainpage" class="flex-grow pb-5 mt-10 overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey"
+  <div id="mainpage" class="flex-grow overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey"
     data-barba="container" data-barba-namespace="home">
-  </div>
+    <p class="mx-5 mt-14">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt rem aut ullam quam, quaerat, ea dignissimos hic delectus, iste provident nostrum voluptatibus culpa quia? Corporis ex fugiat molestiae voluptate optio!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo itaque quisquam consequatur molestias rem. Non reprehenderit libero saepe eum eligendi voluptatem qui inventore explicabo perferendis expedita, delectus accusantium, sit facilis.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam explicabo, ab ad, quam eos consectetur laborum voluptate adipisci quidem fuga exercitationem deleniti, doloremque asperiores quia mollitia culpa cum dolor autem?
+Et officiis sint cupiditate commodi accusamus autem esse quia quidem iure voluptate maiores voluptatum, cumque alias voluptas eveniet ducimus optio quibusdam! Veniam veritatis nulla quibusdam, quisquam quasi mollitia quos beatae.
+Iunt quis vero possimus amet, autem aliquam hic id consequatur porro fuga veritatis. Qui voluptates animi ullam sint.
+Facilis nam consequatur error assumenda, cumque recusandae dolore eaque vero pariatur, exercitationem laborum aliquam rerum maiores corrupti distinctio aut repellat! Nihil, tempore numquam culpa vel optio mollitia consectetur odio aperiam?
+    </p>
+ </div>
 
   <!--Mobile navbar-->
-  <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
-    <div class="flex sm:hidden">
-      <button id="hamburger">
-        <i class="hidden text-4xl text-black toggle bx bx-menu-alt-left dark:text-lightgrey"></i>
-        <i class="block text-4xl text-black toggle bx bx-dots-vertical-rounded dark:text-lightgrey"></i>
+  <nav class="fixed top-0 flex flex-wrap sm:hidden">
+    <div style="margin-bottom:-7px" class="flex sm:hidden">
+      <button id="ham" class="hamburger hamburger--spring" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
       </button>
+      <a href="/index.html">
+      <h1 class="pt-0.5 text-4xl subpixel-antialiased font-bold text-black dark:text-lightgrey">
+        IT<span class="animate-blink">_</span>
+      </h1>
+    </a>
+    <a href="/index.html">
+    <img src="/favicon.svg" alt="Systemechnik Logo" class="fixed inline-flex mt-1 right-2 max-h-8 " />
+  </a>
     </div>
-    <div class="flex flex-col w-screen h-screen bg-white divide-y toggle text-bold dark:bg-darker">
-      <!-- <a href=""
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-        <i class="pr-4 text-3xl bx bx-info-circle"></i>
-        Info
-      </a>
-      -->
-      <a href="/subpages/subjects.html"
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-        <i class="pr-4 text-3xl bx bx-book"></i>
+    <div id="transMenu" class="flex flex-col w-screen h-screen duration-500 -translate-x-full bg-white text-bold dark:bg-darker">
+      <a href="/subpages/subjects.html" 
+        class="flex items-center justify-center h-10 py-2 text-4xl font-medium text-black border-b-2 border-black mt-7 dark:text-lightgrey">
+        <i class="pr-4 text-4xl bx bx-book"></i>
         Fächer
       </a>
       <a href="/subpages/teacher.html"
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-        <i class="pr-4 text-3xl bx bxs-school"></i>
+        class="flex items-center justify-center h-10 py-2 text-4xl font-medium text-black border-b-2 border-black mt-7 dark:text-lightgrey">
+        <i class="pr-4 text-4xl bx bxs-school"></i>
         Lehrer
       </a>
       <a href="/subpages/projects.html"
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-        <i class="pr-4 text-3xl bx bxs-component"></i>
+        class="flex items-center justify-center h-10 py-2 text-4xl font-medium text-black border-b-2 border-black mt-7 dark:text-lightgrey">
+        <i class="pr-4 text-4xl bx bxs-component"></i>
         Projekte
       </a>
       <a href="/subpages/graduates.html"
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-        <i class="pr-4 text-3xl bx bxs-graduation"></i>
+        class="flex items-center justify-center h-10 py-2 text-4xl font-medium text-black border-b-2 border-black mt-7 dark:text-lightgrey">
+        <i class="pr-4 text-4xl bx bxs-graduation"></i>
         Schüler
       </a>
       <a href="/subpages/jobs.html"
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
-        <i class="pr-4 text-3xl bx bx-briefcase"></i>
+        class="flex items-center justify-center h-10 py-2 text-4xl font-medium text-black border-b-2 border-black mt-7 justify-left dark:text-lightgrey">
+        <i class="pr-4 text-4xl bx bx-briefcase"></i>
         Berufe
       </a>
       <a href="/subpages/women.html"
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
-        <i class="pr-4 text-3xl bx bx-female"></i>
+        class="flex items-center justify-center h-10 py-2 text-4xl font-medium text-black border-b-2 border-black mt-7 justify-left dark:text-lightgrey">
+        <i class="pr-4 text-4xl bx bx-female"></i>
         Frauen
       </a>
-      <!--
-        <a href=""
-        class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
-        <i class="pr-4 text-3xl bx bxs-compass"></i>
-        Tour
-      </a>
-    -->
-      <div class=""></div>
-      <a class="flex items-center justify-center h-12 border-black"
-        href="https://anmeldung.htl.moedling.at/anmeldung.external/">
-        <h1 class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR
-          ANMELDUNG</h1>
-      </a>
-    </div>
+      <a href="/subpages/contact.html"
+      class="flex items-center justify-center h-10 py-2 text-4xl font-medium text-black border-b-2 border-black mt-7 justify-left dark:text-lightgrey">
+      <i class="pr-4 text-4xl bx bx-mail-send"></i>
+      Kontakt
+    </a>
+    <a class="flex items-center justify-center h-12 border-black"
+      href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+      <h1 class="pt-10 mt-10 text-4xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">ZUR
+        ANMELDUNG</h1>
+    </a>
+  </div>
   </nav>
 
-  <!--Mobile Footer-->
-  <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden dark:bg-darkgrey">
-    <div>
-      <a href="" class="flex items-center text-2xl font-medium text-center text-black py--2 dark:text-lightgrey">
-        <i class="px-2 pt-1 pr-4 text-3xl bx bx-mail-send"></i>
-        Kontakt
-      </a>
-    </div>
-    <img class="p-0.5" src="/favicon.svg" alt="Systemechnik Logo" />
-  </div>
-
+    <!--barba-->
   <script type="module" src="/main.js"></script>
   <script>
     barba.init({

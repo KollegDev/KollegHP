@@ -10,8 +10,22 @@
     rel="stylesheet" />
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/public/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <title>Informatik_</title>
+  <style>
+    .smear {
+      margin-top: -10px;
+    }
+
+    @supports (-moz-appearance: none) {
+      .smear {
+        margin-top: 0;
+      }
+    }
+  </style>
 </head>
 
 <body class="h-screen bg-white sm:flex dark:bg-darker" data-barba="wrapper">
@@ -95,191 +109,391 @@
     </div>
   </aside>
 
-  <!--Mainpage-->
-  <div id="top" class="flex-grow pb-5 mt-10 overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey"
-    data-barba="container" data-barba-namespace="home">
-    <h3 id="first" class="p-4 mt-10 text-4xl font-light leading-relaxed tracking-tight text-center ">Lorem ipsum
-      dolor sit ahmet</h3>
-    <ul id="top-menu" class="md:visible sm:invisible" style="position: fixed; right: 5px; top: 20vh">
-      <li>
-        <a href="#first" class="dot"></a>
-      </li>
-      <li>
-        <a href="#second" class="dot"></a>
-      </li>
-      <li>
-        <a href="#three" class="dot"></a>
-      </li>
-      <li>
-        <a href="#four" class="dot"></a>
-      </li>
-    </ul>
 
-    <!--Card one-->
-    <div id="first">
-      <div class="content-center w-full max-w-md m-auto mt-10 lg:max-w-4xl lg:flex">
-        <div
-          class="flex-none overflow-hidden text-center bg-cover h-72 lg:h-72 lg:w-48 rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none"
-          style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
-        <div
-          class="bg-white border-t-0 border-l-4 border-r-4 border-red-500 rounded-b-none rounded-tr-none dark:bg-darker dark:border-darkgrey lg:border-t-4 lg:border-l-0 lg:rounded-tr-2xl lg:rounded-b-none lg:rounded-br-none">
-          <div class="p-2">
-            <div class="mb-2 text-4xl font-bold text-black dark:text-lightgrey">J Jonah Jameson</div>
-            <p class="text-2xl text-grey-darker">
-              "The trouble with me is I'm too soft-hearted! I'm always doing favors for everyone! I'm just a big bundle
-              of good-natured jelly! But
-              no one ever appreciates it! It just doesn't pay to be a nice guy! The trouble with me is--I'm too sweet!
-              That reminds me! It's time I
-              was roasting Spider-Man's hide in an editorial again!"
-            </p>
+  <ul id="top-menu" class="sm:visible md:invisible" style="position: fixed; right: 5px; top: 20vh;">
+    <li>
+      <a href="#1" class="dot"></a>
+    </li>
+    <li>
+      <a href="#2" class="dot"></a>
+    </li>
+    <li>
+      <a href="#3" class="dot"></a>
+    </li>
+    <li>
+      <a href="#4" class="dot"></a>
+    </li>
+    <li>
+      <a href="#5" class="dot"></a>
+    </li>
+    <li>
+      <a href="#6" class="dot"></a>
+    </li>
+    <li>
+      <a href="#7" class="dot"></a>
+    </li>
+    <li>
+      <a href="#8" class="dot"></a>
+    </li>
+    <li>
+      <a href="#9" class="dot"></a>
+    </li>
+    <li>
+      <a href="#10" class="dot"></a>
+    </li>
+    <li>
+      <a href="#11" class="dot"></a>
+    </li>
+    <li>
+      <a href="#basti" class="dot"></a>
+    </li>
+  </ul>
+
+  <!--Mainpage-->
+  <div id="mainpage" class="flex-grow mt-10 overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey"
+    data-barba="container" data-barba-namespace="projects">
+
+    <h3 class="p-4 mt-4 text-4xl font-light leading-relaxed tracking-tight text-center">Unterrichtende Lehrer</h3>
+    <div class="">
+      <!--Card one-->
+      <div>
+        <div class="max-w-md lg:max-w-4xl w-full lg:flex content-center m-auto mt-10" id="1">
+          <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-center rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none text-center overflow-hidden" style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Krall_5d3b9628ba.jpg');"></div>
+          <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full lg:border-l-0 border-l-4 border-t-0 border-red-500 rounded-b-none lg:rounded-tr-2xl rounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+            <div class="p-2">
+              <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Dipl.-Ing. Georg KRALL</h2>
+              <p class="text-grey-darker text-2xl">
+                Unterrichtsgegenstände:<br>
+                Netzwerksysteme und verteilte Systeme(NSVS)
+                <br><br>
+                Ausbildung:<br>
+                HTL Innsbruck Elektrotechnik,<br>
+                TU Wien Elektronik und Regelungstechnik
+              </p>
+            </div>
           </div>
         </div>
+        <div
+          style=" background: rgba(255, 255, 255, 0.1);
+                  box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                  backdrop-filter: blur(60.844px);"
+          class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="2">
+          <h1 class="font-bold"></h1>
+          <h2></h2>
+        </div>
+        </div>
+
+        <!--Card two-->
+      <div>
+        <div class="max-w-md lg:max-w-4xl w-full lg:flex flex-row-reverse content-center m-auto mt-10" >
+          <div class="picture h-72 lg:h-72 lg:w-48 flex-none sm:h-96 sm:bg-center bg-cover rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl text-center overflow-hidden"  style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Hack_3e3d36ab0a.jpg')"></div>
+          <div class="lg:border-t-4 border-r-4 w-full dark:border-darkgrey border-l-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none border-t-0 lg:rounded-tl-2xl border-red-500 rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+            <div class="p-2">
+              <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Dipl.-Ing. Niklas HACK</h2>
+              <p class="text-grey-darker text-2xl">
+                Unterrichtsgegenstände:<br>
+                Medientechnik(MEDT), Programmieren(POS1),<br>Datenbanken und Informationssysteme(DBI1),<br>Systemplanung und Projektentwicklung(SYP1)
+                <br><br>
+                Ausbildung:<br>
+                -------------------------
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          style=" background: rgba(255, 255, 255, 0.1);
+                  box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                  backdrop-filter: blur(60.844px);"
+          class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="3">
+          <h1 class="font-bold"></h1>
+          <h2></h2>
+        </div>
+        </div>
+ <!--Card one-->
+ <div>
+  <div class="max-w-md lg:max-w-4xl w-full lg:flex content-center m-auto mt-10" >
+    <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-center rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none text-center overflow-hidden"  style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Niedrist_4bf9c6b0dc.jpg')"></div>
+    <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full lg:border-l-0 border-l-4 border-t-0 border-red-500 rounded-b-none lg:rounded-tr-2xl rounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+      <div class="p-2">
+        <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Dipl.-Ing. Silvia NIEDRIST</h2>
+        <p class="text-grey-darker text-2xl">
+          Unterrichtsgegenstände:<br>
+          Medientechnik(MEDT), Programmieren(POS1)
+          <br><br>
+          Ausbildung:<br>
+          TU Wien Technische Informatik und <br>Versicherungsmathematik
+        </p>
       </div>
-      <div
-        style="background: rgba(255, 255, 255, 0.1); box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(60.844px)"
-        class="w-full max-w-md p-2 m-auto lg:max-w-4xl lg:content-center rounded-b-2xl mb-96">
-        <h1 class="font-bold">Card three</h1>
-        <h2 id="second">Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+    </div>
+  </div>
+  <div
+    style=" background: rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(60.844px);"
+    class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="4">
+    <h1 class="font-bold"></h1>
+    <h2></h2>
+  </div>
+  </div>
+      <!--Text-->
+      <div class="flex flex-wrap">        
       </div>
     </div>
 
     <!--Card two-->
     <div>
-      <div class="flex-row-reverse content-center w-full max-w-md m-auto lg:max-w-4xl lg:flex mt-96">
-        <div
-          class="flex-none overflow-hidden text-center bg-cover h-72 lg:h-72 lg:w-48 rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl"
-          style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
-        <div
-          class="w-full bg-white border-t-0 border-l-4 border-r-4 border-red-500 dark:bg-darker dark:border-darkgrey lg:border-t-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none lg:rounded-tl-2xl rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+      <div class="max-w-md lg:max-w-4xl w-full lg:flex flex-row-reverse content-center m-auto mt-10" >
+        <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-top rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl text-center overflow-hidden" style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Fuxreiter_3feaae038f.jpg')"></div>
+        <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full border-l-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none border-t-0 lg:rounded-tl-2xl border-red-500  rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
           <div class="p-2">
-            <div class="mb-2 text-4xl font-bold text-black dark:text-lightgrey">Peter Parker</div>
-            <p class="text-2xl text-grey-darker">"I hate "</p>
-          </div>
-        </div>
-      </div>
-      <div
-        style="background: rgba(255, 255, 255, 0.1); box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(60.844px)"
-        class="w-full max-w-md p-2 m-auto lg:max-w-4xl lg:content-center rounded-b-2xl mb-96">
-        <h1 class="font-bold">Card three</h1>
-        <h2 id="three">Sed ut perspiciatis unde omnis iste natus error sit.</h2>
-      </div>
-    </div>
-
-    <!--Card three-->
-    <div>
-      <div class="content-center w-full max-w-md m-auto lg:max-w-4xl lg:flex mt-96">
-        <div
-          class="flex-none overflow-hidden text-center bg-cover h-72 lg:h-72 lg:w-48 rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none"
-          style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
-        <div
-          class="bg-white border-t-0 border-l-4 border-r-4 border-red-500 rounded-b-none rounded-tr-none dark:bg-darker dark:border-darkgrey lg:border-t-4 lg:border-l-0 lg:rounded-tr-2xl lg:rounded-b-none lg:rounded-br-none">
-          <div class="p-2">
-            <div class="mb-2 text-4xl font-bold text-black dark:text-lightgrey">J Jonah Jameson</div>
-            <p class="text-2xl text-grey-darker">
-              "The trouble with me is I'm too soft-hearted! I'm always doing favors for everyone! I'm just a big bundle
-              of good-natured jelly! But
-              no one ever appreciates it! It just doesn't pay to be a nice guy! The trouble with me is--I'm too sweet!
-              That reminds me! It's time I
-              was roasting Spider-Man's hide in an editorial again!"
+            <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Ing. Dipl.-Ing.(FH) Thomas FUXREITER</h2>
+            <p class="text-grey-darker text-2xl">
+              Unterrichtsgegenstände:<br>
+              Datenbanken(DBI1), Medientechnik(MEDT),<br>
+              Netzwerksysteme und verteilte Systeme(NSVS)
+              <br><br>
+              Ausbildung:<br>
+              HTL Wr. Neustadt Abteilung Maschinenbau/Automatisierungstechnik, <br>
+              FH Wr. Neustadt Präzisions-, System- und Informationstechnik
             </p>
           </div>
         </div>
       </div>
       <div
-        style="background: rgba(255, 255, 255, 0.1); box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(60.844px)"
-        class="w-full max-w-md p-2 m-auto lg:max-w-4xl lg:content-center rounded-b-2xl mb-96">
-        <h1 id="four" class="font-bold">Card three</h1>
-        <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+        style=" background: rgba(255, 255, 255, 0.1);
+                box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                backdrop-filter: blur(60.844px);"
+        class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="5">
+        <h1 class="font-bold"></h1>
+        <h2></h2>
       </div>
-    </div>
+      </div>
 
-    <!--Card four-->
-    <div id="four">
-      <div class="flex-row-reverse content-center w-full max-w-md m-auto lg:max-w-4xl lg:flex mt-96">
+      <!--Card one-->
+      <div>
+        <div class="max-w-md lg:max-w-4xl w-full lg:flex content-center m-auto mt-10" >
+          <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-center rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none text-center overflow-hidden"  style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Kner_7090e30948.jpg')"></div>
+          <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full lg:border-l-0 border-l-4 border-t-0 border-red-500  rounded-b-none lg:rounded-tr-2xl rounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+            <div class="p-2">
+              <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Dipl.-Ing. Roland KNERINGER</h2>
+              <p class="text-grey-darker text-2xl">
+                Unterrichtsgegenstände:<br>
+                Technische Informatik(TINF)
+                <br><br>
+                Ausbildung:<br>
+                HTL Innsbruck Elektrotechnik,<br>
+                TU Wien Elektronik und Regelungstechnik
+              </p>
+            </div>
+          </div>
+        </div>
         <div
-          class="flex-none overflow-hidden text-center bg-cover h-72 lg:h-72 lg:w-48 rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl"
-          style="background-image: url('https://s1.r29static.com/bin/entry/550/x,80/2212284/image.jpg')"></div>
-        <div
-          class="w-full bg-white border-t-0 border-l-4 border-r-4 border-red-500 dark:bg-darker dark:border-darkgrey lg:border-t-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none lg:rounded-tl-2xl rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+          style=" background: rgba(255, 255, 255, 0.1);
+                  box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                  backdrop-filter: blur(60.844px);"
+          class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="6">
+          <h1 class="font-bold"></h1>
+          <h2></h2>
+        </div>
+        </div>
+
+        <!--Card two-->
+    <div>
+      <div class="max-w-md lg:max-w-4xl w-full lg:flex flex-row-reverse content-center m-auto mt-10" >
+        <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-center rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl text-center overflow-hidden" style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Zacherl_add05cc5d2.jpg')"></div>
+        <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full border-l-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none border-t-0 lg:rounded-tl-2xl border-red-500  rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
           <div class="p-2">
-            <div class="mb-2 text-4xl font-bold text-black dark:text-lightgrey">Peter Parker</div>
-            <p class="text-2xl text-grey-darker">"I hate "</p>
+            <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Dipl.-Ing. Christian ZACHERL</h2>
+            <p class="text-grey-darker text-2xl">
+              Unterrichtsgegenstände:<br>
+              Systemplanung und Projektentwicklung(SYP1)
+              <br><br>
+              Ausbildung:<br>
+              HTL-Mödling Elektronik,<br>
+              TU-Wien Nachrichtentechnik
+            </p>
           </div>
         </div>
       </div>
       <div
-        style="background: rgba(255, 255, 255, 0.1); box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(60.844px)"
-        class="w-full max-w-md p-2 m-auto lg:max-w-4xl lg:content-center rounded-b-2xl mb-96">
-        <h1 class="font-bold">Card three</h1>
-        <h2>Sed ut perspiciatis unde omnis iste natus error sit.</h2>
+        style=" background: rgba(255, 255, 255, 0.1);
+                box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                backdrop-filter: blur(60.844px);"
+        class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="7">
+        <h1 class="font-bold"></h1>
+        <h2></h2>
       </div>
-    </div>
-    <div style="height: 10vh"></div>
-    <div class="mx-auto text-center"><a href="#top">Nach oben</a></div>
+      </div>
 
-    <script>
-      //scrollspy
-      var lastId,
-        topMenu = $("#top-menu"),
-        topMenuHeight = topMenu.outerHeight() + 15,
-        menuItems = topMenu.find("a"),
-        scrollItems = menuItems.map(function () {
-          var item = $($(this).attr("href"));
-          if (item.length) {
-            return item;
-          }
-        });
-      menuItems.click(function (e) {
-        var href = $(this).attr("href"),
-          offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
-        $("html, body").stop().animate(
-          {
-            scrollTop: offsetTop,
-          },
-          300
-        );
-        e.preventDefault();
-      });
-      $(window).scroll(function () {
-        var fromTop = $(this).scrollTop() + topMenuHeight;
-        var cur = scrollItems.map(function () {
-          if ($(this).offset().top < fromTop) return this;
-        });
-        cur = cur[cur.length - 1];
-        var id = cur && cur.length ? cur[0].id : "";
+      <!--Card one-->
+      <div>
+        <div class="max-w-md lg:max-w-4xl w-full lg:flex content-center m-auto mt-10">
+          <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-center rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none text-center overflow-hidden" style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Weiss_c5ef5ea450.jpg')"></div>
+          <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full lg:border-l-0 border-l-4 border-t-0 border-red-500  rounded-b-none lg:rounded-tr-2xl rounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+            <div class="p-2">
+              <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Dipl.-Ing. Manfred WEISS</h2>
+              <p class="text-grey-darker text-2xl">
+                Unterrichtsgegenstände:<br>
+                Systemplanung und Projektentwicklung(SYP1)
+                <br><br>
+                Ausbildung:<br>
+                TU Graz Biomedizinische Technik
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          style=" background: rgba(255, 255, 255, 0.1);
+                  box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                  backdrop-filter: blur(60.844px);"
+          class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="8">
+          <h1 class="font-bold"></h1>
+          <h2></h2>
+        </div>
+        </div>
 
-        if (lastId !== id) {
-          lastId = id;
-          menuItems
-            .parent()
-            .removeClass("active")
-            .end()
-            .filter("[href='#" + id + "']")
-            .parent()
-            .addClass("active");
-        }
-      });
-    </script>
-    <!--Text-->
-    <div class="flex flex-wrap"></div>
-    <style>
-      .dot {
-        height: 25px;
-        width: 25px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: block;
-        margin-top: 0.1rem;
-      }
+        <!--Card two-->
+    <div>
+      <div class="max-w-md lg:max-w-4xl w-full lg:flex flex-row-reverse content-center m-auto mt-10" >
+        <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-center rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl text-center overflow-hidden" style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Trauner_692a085ffb.jpg')"></div>
+        <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full border-l-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none border-t-0 lg:rounded-tl-2xl border-red-500  rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+          <div class="p-2">
+            <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Mag. Josef TRAUNER</h2>
+            <p class="text-grey-darker text-2xl">
+              Unterrichtsgegenstände:<br>
+              Deutsch(D)
+              <br><br>
+              Ausbildung:<br>
+              Realgymnasium Wr. Neustadt,<br>
+              UNI Wien Lehramt Deutsch und Geographie
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        style=" background: rgba(255, 255, 255, 0.1);
+                box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                backdrop-filter: blur(60.844px);"
+        class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="9">
+        <h1 class="font-bold"></h1>
+        <h2></h2>
+      </div>
+      </div>
 
-      .active .dot {
-        background-color: rgba(0, 0, 0, 0.692) !important;
-      }
+      <!--Card one-->
+      <div>
+        <div class="max-w-md lg:max-w-4xl w-full lg:flex content-center m-auto mt-10">
+          <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-center rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none text-center overflow-hidden" style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Matzner_fbde5ccc1d.jpg')"></div>
+          <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full lg:border-l-0 border-l-4 border-t-0 border-red-500  rounded-b-none lg:rounded-tr-2xl rounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+            <div class="p-2">
+              <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">OStR. Mag. Veronika MATZNER</h2>
+              <p class="text-grey-darker text-2xl">
+                Unterrichtsgegenstände:<br>
+                Angewandte Mathematik(AM)
+                <br><br>
+                Ausbildung:<br>
+                HTL-Mödling Abteilung Nachrichtentechnik,<br>
+                Uni Wien Lehramt für Physik und Mathematik
 
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          style=" background: rgba(255, 255, 255, 0.1);
+                  box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                  backdrop-filter: blur(60.844px);"
+          class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="10">
+          <h1 class="font-bold"></h1>
+          <h2></h2>
+        </div>
+        </div>
+
+        <!--Card two-->
+    <div>
+      <div class="max-w-md lg:max-w-4xl w-full lg:flex flex-row-reverse content-center m-auto mt-10" >
+        <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-center rounded-t-2xl rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl text-center overflow-hidden" style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Zehetbauer_926e4d1643.jpg')"></div>
+        <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full border-l-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none border-t-0 lg:rounded-tl-2xl border-red-500 rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+          <div class="p-2">
+            <div class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Mag. Verena ZEHETBAUER</div>
+            <p class="text-grey-darker text-2xl">
+              Unterrichtsgegenstände:<br>
+              Englisch(E1), Deutsch(D)
+              <br><br>
+              Ausbildung:<br>
+              BRG8 Albertgasse Wien,<br>
+              UNI Wien Lehramt Deutsch und Englisch,<br>
+              UNI Wien BA Komparatistik
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        style=" background: rgba(255, 255, 255, 0.1);
+                box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                backdrop-filter: blur(60.844px);"
+        class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="11">
+        <h1 class="font-bold"></h1>
+        <h2></h2>
+      </div>
+      </div>
+
+      <!--Card one-->
+      <div>
+        <div class="max-w-md lg:max-w-4xl w-full lg:flex content-center m-auto mt-10">
+          <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-center rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl lg:rounded-bl-none text-center overflow-hidden" style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Kapeller_b8162b6b4e.jpg')"></div>
+          <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full lg:border-l-0 border-l-4 border-t-0 border-red-500 rounded-b-none lg:rounded-tr-2xl rounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+            <div class="p-2">
+              <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Dr. Erwin KAPELLER</h2>
+              <p class="text-grey-darker text-2xl">
+                Unterrichtsgegenstände:<br>
+                Wirtschaft und Recht (WIR3)
+                <br><br>
+                Ausbildung:<br>
+                HTL-Mödling Abteilung Nachrichtentechnik,<br>
+                Uni Wien Lehramt für Physik und Mathematik
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          style=" background: rgba(255, 255, 255, 0.1);
+                  box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                  backdrop-filter: blur(60.844px);"
+          class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2" id="basti">
+          <h1 class="font-bold"></h1>
+          <h2></h2>
+        </div>
+        </div>
+
+        <!--Card two-->
+    <div>
+      <div class="max-w-md lg:max-w-4xl w-full lg:flex flex-row-reverse content-center m-auto mt-10" >
+        <div class="picture h-72 lg:h-72 lg:w-48 flex-none bg-cover sm:h-96 sm:bg-center rounded-t-2xl lg:rounded-t-none lg:rounded-tr-2xl text-center overflow-hidden" style="background-image: url('https://htl.moedling.at/fileadmin/_processed_/csm_Mayer_11ccb423d5.jpg')"></div>
+        <div class="lg:border-t-4 dark:border-darkgrey border-r-4 w-full border-l-4 lg:border-l-4 lg:border-r-0 lg:rounded-tr-none border-t-0 lg:rounded-tl-2xl border-red-500 rounded-b-nonerounded-tr-none lg:rounded-b-none lg:rounded-br-none">
+          <div class="p-2">
+            <h2 class="dark:text-gray-100 text-black font-bold mb-2 text-4xl">Sebastian MAYER</h2>
+            <p class="text-grey-darker text-2xl">
+              Unterrichtsgegenstände:<br>
+              Schulwart
+              <br><br>
+              Ausbildung:<br>
+              HTL Mödling Fachschule Innenausbau
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        style=" background: rgba(255, 255, 255, 0.1);
+                box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                backdrop-filter: blur(60.844px);"
+        class="max-w-md lg:max-w-4xl w-full lg:content-center m-auto rounded-b-2xl p-2">
+        <h1 class="font-bold"></h1>
+        <h2></h2>
+      </div>
+      </div>
+    
+    <div class="md:invisible sm:visible h-10 w-full"></div>
   </div>
 
   <!--Mobile navbar-->
@@ -317,7 +531,7 @@
         <i class="pr-4 text-3xl bx bxs-graduation"></i>
         Schüler
       </a>
-      <a href="/subpages/beruf.html"
+      <a href="/subpages/jobs.html"
         class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
         <i class="pr-4 text-3xl bx bx-briefcase"></i>
         Berufe
@@ -344,18 +558,105 @@
   </nav>
 
   <!--Mobile Footer-->
-  <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden">
+  <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden dark:bg-darkgrey">
     <div>
-      <a href="/subpages/contact.html" class="flex items-center text-2xl font-medium text-center text-black py--2">
+      <a href="/subpages/contact.html"
+        class="flex items-center text-2xl font-medium text-center text-black py--2 dark:text-lightgrey">
         <i class="px-2 pt-1 pr-4 text-3xl bx bx-mail-send"></i>
         Kontakt
       </a>
     </div>
-    <img class="p-0.5" src="/favicon_dark.svg" alt="Systemechnik Logo" />
+    <img class="p-0.5" src="/favicon.svg" alt="Systemechnik Logo" />
   </div>
 
   <script type="module" src="/main.js"></script>
+  <script>
+    barba.init({
+      transitions: [{
+        name: 'default-transition',
+        enter(data) {
+          let animate = anime({
+            targets: data.next.container,
+            opacity: 0,
+            // Property Parameters
+            duration: 200,
+            easing: 'linear',
+            // Animation Parameters
+            direction: 'reverse'
+          });
+        },
+        leave(data) {
+          let animate = anime({
+            targets: data.current.container,
+            targets: data.next.container,
+            opacity: 0,
+            // Property Parameters
+            duration: 200,
+            easing: 'linear',
+            // Animation Parameters
+            direction: 'normal'
+          });
+        },
+      }]
+    });
+  </script>
+  <script>
+  //scrollspy
+  var lastId,
+      topMenu = $("#top-menu"),
+      topMenuHeight = topMenu.outerHeight()+15,
+      menuItems = topMenu.find("a"),
+      scrollItems = menuItems.map(function(){
+        var item = $($(this).attr("href"));
+        if (item.length) { return item; }
+      });
+  menuItems.click(function(e){
+    var href = $(this).attr("href"),
+        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+    $('html, body').stop().animate({ 
+        scrollTop: offsetTop
+    }, 300);
+    e.preventDefault();
+  });
+  $(window).scroll(function(){
+    var fromTop = $(this).scrollTop()+topMenuHeight;
+    var cur = scrollItems.map(function(){
+      if ($(this).offset().top < fromTop)
+        return this;
+    });
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
+    
+    if (lastId !== id) {
+        lastId = id;
+        menuItems
+          .parent().removeClass("active")
+          .end().filter("[href='#"+id+"']").parent().addClass("active");
+    }                   
+  });
+</script>
+<style>
+  .dot{
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: block;
+    margin-top:0.1rem;
+    opacity: 0.4;
+  }
+  .active .dot{
+    background-color: rgba(0, 0, 0, 0.692) !important;
+  }
+  .picture{
+    height: revert;
+  }
+  @media only screen and (max-width: 1024px) {
+    .picture{
+      height: 24rem;
+    }
+  }
+  </style>
 </body>
-
 
 </html>
