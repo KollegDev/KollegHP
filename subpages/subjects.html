@@ -9,12 +9,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet" />
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+<<<<<<< Updated upstream
+=======
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+>>>>>>> Stashed changes
   <link rel="stylesheet" href="/public/css/style.css" />
   <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <title>Informatik_</title>
+  <style>
+    .smear {
+      margin-top: -10px;
+    }
+
+    @supports (-moz-appearance: none) {
+      .smear {
+        margin-top: 0;
+      }
+    }
+  </style>
 </head>
 
 <body class="h-screen bg-white sm:flex dark:bg-darker" data-barba="wrapper">
@@ -70,6 +84,7 @@
           class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
           <i class="pr-4 text-3xl bx bxs-graduation"></i>
           Schüler
+<<<<<<< Updated upstream
         </a>
         <a href="/subpages/jobs.html"
           class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
@@ -81,6 +96,19 @@
           <i class="pr-4 text-3xl bx bx-female"></i>
           Frauen
         </a>
+=======
+        </a>
+        <a href="/subpages/jobs.html"
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
+          <i class="pr-4 text-3xl bx bx-briefcase"></i>
+          Berufe
+        </a>
+        <a href="/subpages/women.html"
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
+          <i class="pr-4 text-3xl bx bx-female"></i>
+          Frauen
+        </a>
+>>>>>>> Stashed changes
         <!-- <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
             <i class="pr-4 text-3xl bx bxs-compass"></i>
             Tour
@@ -99,6 +127,96 @@
   </aside>
 
   <!--Mainpage-->
+<<<<<<< Updated upstream
+  <div id="mainpage" class="flex-grow mt-10 overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey"
+    data-barba="container" data-barba-namespace="projects">
+    <h3 class="p-4 text-4xl font-light tracking-tight text-center">
+      IT-Fächer
+    </h3>
+    <div class="container p-8 mx-auto">
+      <div class="flex flex-row flex-wrap -mx-2">
+        <!--Card One-->
+        <div
+          class="flex flex-col w-full h-64 px-2 mb-4 duration-200 ease-linear transform md:w-1/2 md:h-auto hover:opacity-50">
+          <a class="block w-full h-full bg-center bg-no-repeat bg-cover rounded-t-2xl"
+            href="/subpages/posDescription.html" title="Weiter zu Fächerbeschreibung"
+            style="background-image: url(https://cdn.discordapp.com/attachments/681523223724425369/823565774496071730/image0.jpg)"></a>
+          <div
+            style="background: rgba(255, 255, 255, 0.1); box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(60.844px)"
+            class="p-2 shadow-2xl rounded-b-2xl smear ">
+            <h1 class="font-bold">Programmieren und System-Engineering: POS</h1>
+          </div>
+        </div>
+        <!--Card Two-->
+        <div class="w-full px-2 mb-4 md:w-1/2">
+          <div class="flex flex-col -mx-2 sm:flex-row md:flex-col">
+            <div
+              class="flex flex-col w-full h-48 px-2 mb-4 sm:w-1/2 md:w-full xl:h-64 sm:mb-0 md:mb-4 hover:opacity-50">
+              <a class="block w-full h-full bg-center bg-no-repeat bg-cover rounded-t-2xl bg-grey-dark"
+                href="/subpages/medtDescription.html" title="Weiter zu Fächerbeschreibung"
+                style="background-image: url(https://cdn.discordapp.com/attachments/681523223724425369/818327069581770752/fate_grand_order__queen_medb_by_hgsueun_dc3qyi3-pre.png)"></a>
+              <div
+                style="background: rgba(255, 255, 255, 0.1); box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(60.844px)"
+                class="p-2 shadow-2xl rounded-b-2xl smear">
+                <h1 class="font-bold">Medientechnik: MEDT</h1>
+              </div>
+            </div>
+            <!--Card Three-->
+            <div class="flex flex-col w-full h-48 px-2 sm:w-1/2 md:w-full xl:h-64 hover:opacity-50">
+              <a class="block w-full h-full bg-center bg-no-repeat bg-cover rounded-t-2xl bg-grey-dark"
+                href="/subpages/dbiDescription.html" title="Weiter zu Fächerbeschreibung"
+                style="background-image: url(https://cdn.discordapp.com/attachments/629404233829187595/823971869270212618/6f8tom94cgo61.png)"></a>
+              <div
+                style="background: rgba(255, 255, 255, 0.1); box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(60.844px)"
+                class="p-2 shadow-2xl rounded-b-2xl smear">
+                <h1 class="font-bold">Datenbanken und Informationssysteme: DBI</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Card Two-->
+        <div class="w-full px-2 mb-4 md:w-1/2">
+          <div class="flex flex-col -mx-2 sm:flex-row md:flex-col">
+            <div
+              class="flex flex-col w-full h-48 px-2 mb-4 sm:w-1/2 md:w-full xl:h-64 sm:mb-0 md:mb-4 hover:opacity-50">
+              <a class="block w-full h-full bg-center bg-no-repeat bg-cover rounded-t-2xl bg-grey-dark"
+                href="/subpages/sypDescription.html" title="Weiter zu Fächerbeschreibung"
+                style="background-image: url(https://cdn.discordapp.com/attachments/681523223724425369/818327069581770752/fate_grand_order__queen_medb_by_hgsueun_dc3qyi3-pre.png)"></a>
+              <div
+                style="background: rgba(255, 255, 255, 0.1); box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(60.844px)"
+                class="p-2 shadow-2xl rounded-b-2xl smear">
+                <h1 class="font-bold">Systemplanung und Projektmanagement: SYP</h1>
+              </div>
+            </div>
+            <!--Card Three-->
+            <div class="flex flex-col w-full h-48 px-2 sm:w-1/2 md:w-full xl:h-64 hover:opacity-50">
+              <a class="block w-full h-full bg-center bg-no-repeat bg-cover rounded-t-2xl bg-grey-dark"
+                href="/subpages/tinfDescription.html" title="Weiter zu Fächerbeschreibung"
+                style="background-image: url(https://cdn.discordapp.com/attachments/629404233829187595/823971869270212618/6f8tom94cgo61.png)"></a>
+              <div
+                style="background: rgba(255, 255, 255, 0.1); box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(60.844px)"
+                class="p-2 shadow-2xl rounded-b-2xl smear">
+                <h1 class="font-bold">Technische Informatik: TINF</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!--Card One-->
+        <div
+        class="flex flex-col w-full h-64 px-2 mb-4 duration-200 ease-linear transform md:w-1/2 md:h-auto hover:opacity-50">
+        <a class="block w-full h-full bg-center bg-no-repeat bg-cover rounded-t-2xl"
+          href="/subpages/nsvsDescription.html" title="Weiter zu Fächerbeschreibung"
+          style="background-image: url(https://cdn.discordapp.com/attachments/681523223724425369/823565774496071730/image0.jpg)"></a>
+        <div
+          style="background: rgba(255, 255, 255, 0.1); box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25); backdrop-filter: blur(60.844px)"
+          class="p-2 shadow-2xl rounded-b-2xl smear ">
+          <h1 class="font-bold">Netzwerktechnik und verteilte Systeme: NSVS</h1>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+=======
   <div id="mainpage" class="flex-grow pb-5 mt-10 overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey"
     data-barba="container" data-barba-namespace="home">
     <div class="grid grid-cols-1 gap-5 mx-auto sm:mx-20 place-items-auto">
@@ -258,6 +376,7 @@
     </script>
   </div>
 
+>>>>>>> Stashed changes
   <!--Mobile navbar-->
   <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
     <div class="flex sm:hidden">
@@ -363,5 +482,8 @@
     });
   </script>
 </body>
+<<<<<<< Updated upstream
+=======
 
+>>>>>>> Stashed changes
 </html>

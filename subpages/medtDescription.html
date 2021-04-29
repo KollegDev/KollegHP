@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>Informatik_</title>
+</head>
+
+<body class="h-screen bg-white sm:flex dark:bg-darker" data-barba="wrapper">
+    <header class="fixed top-0 flex items-center w-full bg-white border-b-2 border-black dark:bg-darkgrey h-11 sm:h-10">
+        <a class="inline-flex justify-center invisible w-12 h-10 sm:visible">
+            <button id="hamburger-full">
+                <i
+                    class="hidden text-4xl text-black bx toggle-full bx-dots-vertical-rounded dark:text-lightgrey dark:hover:text-purple-400"></i>
+                <i
+                    class="text-4xl text-black toggle-full bx bx-menu-alt-left dark:text-lightgrey dark:hover:text-purple-400"></i>
+            </button>
+        </a>
+        <a href="/index.html">
+            <h1 class="pl-2 text-2xl subpixel-antialiased font-bold text-center text-black dark:text-lightgrey">
+                INFORMATIK<span class="animate-blink">_</span>
+            </h1>
+        </a>
+        <div class="fixed right-0 invisible border-l-2 border-black sm:visible">
+            <a href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+                <h1
+                    class="invisible pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black transition duration-200 ease-in-out transform sm:visible hover:text-red dark:text-lightgrey dark:hover:text-purple-400">
+                    ZUR ANMELDUNG
+                </h1>
+            </a>
+        </div>
+    </header>
+    <!--Left Navigation Menu-->
+    <aside class="flex-col hidden sm:flex">
+        <div id="left-nav"
+            class="flex flex-col justify-between flex-grow bg-white border-r-2 border-black dark:bg-darkgrey toggle-full">
+            <nav class="flex flex-col px-2 pr-4 mt-10">
+                <!-- <a href=""
+          class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
+          <i class="pr-4 text-3xl bx bx-info-circle"></i>
+          Infos
+        </a> -->
+                <a href="/subpages/subjects.html"
+                    class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95 ">
+                    <i class="pr-4 text-3xl bx bx-book"></i>
+                    Fächer
+                </a>
+                <a href="/subpages/teacher.html"
+                    class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
+                    <i class="pr-4 text-3xl bx bxs-school"></i>
+                    Lehrer
+                </a>
+                <a href="/subpages/projects.html"
+                    class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-105">
+                    <i class="pr-4 text-3xl bx bxs-component"></i>
+                    Projekte
+                </a>
+                <a href="/subpages/graduates.html"
+                    class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
+                    <i class="pr-4 text-3xl bx bxs-graduation"></i>
+                    Schüler
+                </a>
+                <a href="/subpages/jobs.html"
+                    class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
+                    <i class="pr-4 text-3xl bx bx-briefcase"></i>
+                    Berufe
+                </a>
+                <a href="/subpages/women.html"
+                    class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
+                    <i class="pr-4 text-3xl bx bx-female"></i>
+                    Frauen
+                </a>
+                <!-- <a href="" class="flex items-center justify-start w-full py-2 text-2xl font-medium text-center text-black dark:text-lightgrey">
+            <i class="pr-4 text-3xl bx bxs-compass"></i>
+            Tour
+          </a> -->
+            </nav>
+            <!--Logo-->
+            <div class="flex-row w-full">
+                <img src="/favicon.svg" alt="Systemechnik Logo" class="block m-auto " />
+                <a href="/subpages/contact.html"
+                    class="flex items-center w-full py-4 text-2xl font-medium text-center text-black transition duration-200 ease-in-out transform dark:text-lightgrey dark:hover:text-purple-400 hover:scale-95">
+                    <i class="px-2 pt-1 pr-4 text-3xl bx bx-mail-send"></i>
+                    Kontakt
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!--Mainpage-->
+    <div id="mainpage" class="flex-grow mt-10 overflow-y-auto text-black sm:overflow-y-scroll dark:text-lightgrey"
+        data-barba="container" data-barba-namespace="projectDes">
+        <h3 class="p-4 text-4xl font-light tracking-tight text-center">
+            <a href="/subpages/subjects.html"><i class="text-3xl bx bx-arrow-back dark:hover:text-purple-400"></i></a>
+            Fächerbeschreibung im Detail: MEDT
+        </h3>
+
+        <div class="grid grid-cols-1 gap-3 p-4 xl:grid-cols-2">
+            <!--Card one-->
+            <div class="">
+              <img style="max-height: 25em" class="object-cover w-full rounded-t-2xl"
+                src="https://cdn.discordapp.com/attachments/681523223724425369/823565774496071730/image0.jpg" alt="" />
+              <div style="
+                    border-radius: 0px 0px 25px 25px;
+                    background: rgba(255, 255, 255, 0.1);
+                    box-shadow: inset 0px 7px 12px rgba(0, 0, 0, 0.25);
+                    backdrop-filter: blur(60.844px);
+                    border-radius: 0px 0px 25px 25px;
+                    z-index: 10;
+                  " class="p-2 shadow-2xl rounded-b-2xl">
+                <h1 class="font-bold">Fächerbeschreibung im Detail: MEDT</h1>
+              </div>
+            </div>
+            <!--Text-->
+            <div class="flex flex-col flex-wrap">
+              <h1 class="pb-2 pl-3 text-2xl font-bold leading-relaxed tracking-tight">Medientechnik: MEDT</h1>
+              <p class="pb-2 pl-3">
+                In dem Medientechnik-Unterricht (MEDT) beschäftigt man sich mit Farbenlehre, dem Internet of Things, Websites sowie deren Design (Frontend & Backend) im und wirft auch einen Blick auf die Audio und Videobearbeitung. 
+                Es werden eigene Webauftritte sowie komplexe Webapplikationen erstellt, zusätzlich lernt man diverse Techniken für das optimale Erstellen jener kennen.
+
+              <p class="pb-2 pl-3">Stichworte: HTML, CSS, Frameworks, PHP, JavaScript, Audiobearbeitung, Videobearbeitung</p>
+              </p>
+              
+            </div>
+          </div>
+            
+    </div>
+
+    <!--Mobile navbar-->
+    <nav class="fixed top-0 flex flex-wrap items-center justify-between sm:hidden">
+        <div class="flex sm:hidden">
+            <button id="hamburger">
+                <i class="hidden text-4xl text-black toggle bx bx-menu-alt-left dark:text-lightgrey"></i>
+                <i class="block text-4xl text-black toggle bx bx-dots-vertical-rounded dark:text-lightgrey"></i>
+            </button>
+        </div>
+        <div class="flex flex-col w-screen h-screen bg-white divide-y toggle text-bold dark:bg-darker">
+            <!-- <a href=""
+      class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+      <i class="pr-4 text-3xl bx bx-info-circle"></i>
+      Info
+    </a>
+    -->
+            <a href="/subpages/subjects.html"
+                class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+                <i class="pr-4 text-3xl bx bx-book"></i>
+                Fächer
+            </a>
+            <a href="/subpages/teacher.html"
+                class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+                <i class="pr-4 text-3xl bx bxs-school"></i>
+                Lehrer
+            </a>
+            <a href="/subpages/projects.html"
+                class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+                <i class="pr-4 text-3xl bx bxs-component"></i>
+                Projekte
+            </a>
+            <a href="/subpages/graduates.html"
+                class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+                <i class="pr-4 text-3xl bx bxs-graduation"></i>
+                Schüler
+            </a>
+            <a href="/subpages/jobs.html"
+                class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
+                <i class="pr-4 text-3xl bx bx-briefcase"></i>
+                Berufe
+            </a>
+            <a href="/subpages/women.html"
+                class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black justify-left dark:text-lightgrey">
+                <i class="pr-4 text-3xl bx bx-female"></i>
+                Frauen
+            </a>
+            <!--
+      <a href=""
+      class="flex items-center justify-center h-10 py-2 text-2xl font-medium text-black border-black dark:text-lightgrey">
+      <i class="pr-4 text-3xl bx bxs-compass"></i>
+      Tour
+    </a>
+  -->
+            <div class=""></div>
+            <a class="flex items-center justify-center h-12 border-black"
+                href="https://anmeldung.htl.moedling.at/anmeldung.external/">
+                <h1
+                    class="pl-2 pr-2 text-2xl subpixel-antialiased font-bold text-black hover:text-red dark:text-lightgrey">
+                    ZUR
+                    ANMELDUNG</h1>
+            </a>
+        </div>
+    </nav>
+
+    <!--Mobile Footer-->
+    <div class="fixed bottom-0 inline-flex justify-between visible w-full bg-gray-100 h-11 sm:hidden dark:bg-darkgrey">
+        <div>
+            <a href="/subpages/contact.html"
+                class="flex items-center text-2xl font-medium text-center text-black py--2 dark:text-lightgrey">
+                <i class="px-2 pt-1 pr-4 text-3xl bx bx-mail-send"></i>
+                Kontakt
+            </a>
+        </div>
+        <img class="p-0.5" src="/favicon.svg" alt="Systemechnik Logo" />
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+        barba.init({
+            transitions: [{
+                name: 'default-transition',
+                enter(data) {
+                    let animate = anime({
+                        targets: data.next.container,
+                        opacity: 0,
+                        // Property Parameters
+                        duration: 200,
+                        easing: 'linear',
+                        // Animation Parameters
+                        direction: 'reverse'
+                    });
+                },
+                leave(data) {
+                    let animate = anime({
+                        targets: data.current.container,
+                        targets: data.next.container,
+                        opacity: 0,
+                        // Property Parameters
+                        duration: 200,
+                        easing: 'linear',
+                        // Animation Parameters
+                        direction: 'normal'
+                    });
+                },
+            }]
+        });
+    </script>
+</body>
+
+</html>
